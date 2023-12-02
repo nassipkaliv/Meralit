@@ -1,30 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;800&display=swap');
 
 body {
+  font-family: 'Manrope', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.intro {
   background: url("../assets/img/1.png"), lightgray 0px -596.314px / 123.437% 242.079%;
   background-position: top;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  font-family: 'Manrope', sans-serif;
-  color: #fff;
-  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+.intro-content {
+  text-align: center;
+  margin: auto;
+  position: absolute; /* Positioning content absolutely within the intro */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centering content both horizontally and vertically */
 }
 
 .navbar {
   padding-top: 28px;
 }
 
-.container-fluid {
-  padding: 0 20px;
-}
-
-.intro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 87vh;
-  flex-direction: column;
+.navbar-brand {
+  margin: 0 auto;
 }
 
 .intro-title {
@@ -34,6 +45,7 @@ body {
   font-weight: 800;
   letter-spacing: 1.6px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .intro-subtitle {
@@ -47,10 +59,13 @@ body {
 }
 
 .intro-bottom {
-  display: flex;
-  align-items: end;
-  
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
 }
+
 
 .image-gallery {
   background-color: rgba(0, 0, 0, 0.50);
@@ -66,6 +81,16 @@ body {
   background-size: cover;
 }
 
+.gallery-youtube-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 925px;
+  margin: 0 auto;
+  background-size: cover;
+  text-align: center;
+}
 
 
 
@@ -89,4 +114,34 @@ body {
   text-transform: uppercase;
 }
 
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+.footer-logo {
+  margin-top: 70px;
+}
+
+.social-media-logo {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 46.5px;
+}
+
+.footer-description {
+  color: #FFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  margin-bottom: 160px;
+}
