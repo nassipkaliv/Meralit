@@ -342,3 +342,114 @@ body::before {
 .arrow {
   margin-left: auto;
 }
+
+.plan-uchastka {
+  margin-left: auto;
+}
+
+.project-info {
+  margin-right: auto;
+}
+
+.btn-project {
+  border: 1px solid #000;
+  color: #000;
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  border-radius: 0;
+  padding: 15px 20px;
+}
+
+.project-description {
+  color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1.8px;
+}
+
+.project-description a{
+  color: #000;
+}
+
+.project-title-small h1{
+  color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.a-link {
+  color: #9FA1A7 !important;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1.8px;
+  text-decoration-line: underline;
+}
+
+.location2-img {
+  padding-right: 0;
+}
+
+.location1-img {
+  padding-left: 0;
+}
+
+.project-title-small h1 {
+  color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 108.597%;
+  text-transform: uppercase;
+}
+
+.project-title-small .h1-color {
+  color: #D9BC9F !important; 
+}
+
+.project-title-small .h1-phone-number {
+  font-weight: 500 !important;
+}
+
+.project-question-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.project-question-item p {
+  color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding-left: 16px;
+}
+
+.mobile-number {
+  color: #DFD5CC;
+  font-family: 'Manrope', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+}
+
+.project-question-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.project-question-list p {
+  color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding-left: 20px;
+}
