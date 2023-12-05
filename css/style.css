@@ -22,9 +22,6 @@ body::before {
 
 
 .intro {
-  background-size: contain;
-  background-position: center;
-  background-repeat: repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,13 +32,17 @@ body::before {
 }
 
 .intro-content {
-  text-align: center;
   margin: auto;
   position: absolute; 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); 
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
 }
 
 .navbar {
@@ -70,6 +71,7 @@ body::before {
   font-weight: 300;
   letter-spacing: 2.4px;
   margin-top: 23px;
+  margin-bottom: 35px;
 }
 
 .intro-bottom {
@@ -82,9 +84,6 @@ body::before {
 }
 
 
-.image-gallery {
-  background-color: rgba(0, 0, 0, 0.50);
-}
 
 .gallery-img-container {
   display: flex;
@@ -105,6 +104,10 @@ body::before {
   margin: 0 auto;
   background-size: cover;
   text-align: center;
+}
+
+.youtube-logo {
+  z-index: 2;
 }
 
 
@@ -128,6 +131,16 @@ body::before {
   font-weight: 300;
   letter-spacing: 5.12px;
   text-transform: uppercase;
+  z-index: 2;
+}
+
+.gallery-subtitle-main {
+  color: #FFF;
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1.6px;
   z-index: 2;
 }
 
@@ -165,4 +178,167 @@ body::before {
   text-transform: uppercase;
   margin-bottom: 160px;
   z-index: 2;
+}
+
+.btn-intro {
+  border: 1px solid #fff;  
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 2.4px;
+  color: #fff;
+  width: 338px;
+  height: 70px;
+  border-radius: 0;
+}
+
+.project-container {
+  background: #fff;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  padding: 35px 21px 35px 29px;
+  color: #000;
+}
+
+.project-title h1 {
+  color: #000;
+  font-size: 72px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: 'Manrope', sans-serif;
+  margin-bottom: 30px;
+}
+
+.line {
+  background: #d9bc9f;
+  width: 198px;
+  height: 10px;
+}
+
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-auto {
+  padding-right: 0;
+}
+
+.col.stat {
+  padding-left: 5px;
+}
+
+.stat-title {
+  color: #000;
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  letter-spacing: -2.5px;
+}
+
+.stat-subtitle {
+  color: #000;  
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  font-weight: 800;;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.stat-subtitle-addition {
+  color: #DBB688;
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: lowercase;
+}
+
+.btn-gallery {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 2.4px;
+  width: 258px;
+  height: 58px;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 0;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+.gallery-description-list {
+  color: #FFF;
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1.6px;
+  z-index: 2;
+}
+
+.gallery-ref-title {
+  text-align: left;
+  color: #DBB688;
+  font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.gallery-ref-subtitle-main {
+  text-align: left;
+  z-index: 2;
+  color: #FFF;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1.44px;
+  z-index: 2;
+}
+.gallery-ref-container {
+  display: flex;
+  flex-direction: column;
+  height: 480px;
+  margin: 0 auto;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.gallery-ref-container .container {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding:  0 120px;
+}
+
+.container-bottom {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.btn-gallery-ref {
+  border: 1px solid #FFF;
+  color: #fff;
+  width: 240px;
+  height: 64.215px;
+  border-radius: 0;
+  font-family: "Manrope", sans-serif;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.arrow {
+  margin-left: auto;
 }
