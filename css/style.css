@@ -20,6 +20,58 @@ body::before {
   z-index: 1;
 }
 
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; 
+  z-index: 1000; 
+}
+
+.preloader__spinner {
+  text-align: center;
+}
+
+.preloader__image {
+  width: 100px; /* Adjust the width and height as needed */
+  height: 100px;
+}
+
+#meralit-logo path {
+  stroke-dasharray: 1000; 
+  stroke-dashoffset: 1000; 
+  animation: draw 3s ease-in-out forwards;
+}
+
+.logo-path {
+  fill: white;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+#content {
+  display: none;
+}
+
+#loader.active + #content {
+  display: block;
+}
+
 
 .intro {
   display: flex;
@@ -813,6 +865,33 @@ body.modal-open {
 }
 
 
+
+.intro-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+}
+
+.intro-bottom > * {
+  animation: fadeInLeft 1s ease-out;
+}
+
+.bottom-arrow {
+  animation: bounce 2s infinite;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 .intro-bottom {
   display: flex;

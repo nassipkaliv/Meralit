@@ -10,7 +10,13 @@
 
 </head>
 <body>
+  <div id="loader" class="preloader">
+    <div class="preloader__spinner">
+      <img class="preloader__image" src="assets/img/preloader.gif" alt="logo">
+    </div>
+  </div>
 
+  <div id="content">
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container-fluid">
       <button type="button" class="faq-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -249,7 +255,7 @@
   </div>
 
   <div class="intro"  style="background: url('assets/img/main1.jpg'), lightgray 0px -596.314px / 123.437% 242.079% no-repeat;">
-    <div class="intro-content">
+    <div class="intro-content mt-5">
       <svg class="intro-logo" xmlns="http://www.w3.org/2000/svg" width="182" height="50" viewBox="0 0 182 50" fill="none">
         <use xlink:href="assets/icons/icons.svg#meralit-logo"></use>
       </svg>
@@ -994,6 +1000,7 @@
     </svg>
   </div>
 </div>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -1002,6 +1009,38 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/app.js"></script>
+<script>
+    var loader;
 
+function loadNow(opacity) {
+    if (opacity <= 0) {
+        displayContent();
+    } else {
+        loader.style.opacity = opacity;
+        window.setTimeout(function() {
+            loadNow(opacity - 0.05);
+        }, 50);
+    }
+}
+
+function displayContent() {
+    loader.style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    loader = document.getElementById('loader');
+    loadNow(3);
+});
+
+document.onreadystatechange = function () {
+      if (document.readyState === 'complete') {
+        // Загрузка страницы завершена
+
+        // Добавьте класс для запуска анимации
+        document.querySelector('.intro-bottom').classList.add('animated');
+      }
+    };
+  </script>
 </body>
 </html>
