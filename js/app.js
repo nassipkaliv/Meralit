@@ -4,8 +4,8 @@ function scrollToTop() {
 }
 
 const swiper = new Swiper('.sample-slider', {
-  loop: true,                        
-  slidesPerView: 2,                 
+  loop: true,                       
+  slidesPerView: 2,                  
   centeredSlides : true,             
   spaceBetween: 20,                
   autoplay: {                        
@@ -29,3 +29,21 @@ var swiper1 = new Swiper(".mySwiper", {
     clickable: true,
   },
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  var parallax = document.querySelector('.parallax-container');
+
+  window.addEventListener('scroll', function() {
+      var offset = window.pageYOffset;
+      parallax.style.backgroundPositionY = offset * 0.7 + 'px';
+  });
+});
+
+$('#overlay').on('show.bs.modal', function () {
+  $(this).addClass('show');
+});
+
+$('#overlay').on('hidden.bs.modal', function () {
+  $(this).removeClass('show');
+});
+

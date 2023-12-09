@@ -87,6 +87,32 @@ body::before {
   }
 }
 
+.bottom-arrow {
+  margin-top: 180px;
+
+  z-index: 2;
+  cursor: pointer;
+}
+
+.phone-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-bottom p {
+  padding-top: 20px;
+  color: #FFF;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+
 
 .intro-bottom {
   position: absolute;
@@ -95,6 +121,12 @@ body::before {
   width: 100%;
   margin-bottom: 40px;
   z-index: 2;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.left-bottom-icons {
+  gap: 20px;
 }
 
 
@@ -583,6 +615,16 @@ body::before {
   border: none;
 }
 
+.faq-button {
+  background-color: transparent;
+  border: none;
+}
+
+.close {
+  background-color: transparent;
+  border: none;
+}
+
 body.modal-open::before {
   content: "";
   position: fixed;
@@ -591,9 +633,9 @@ body.modal-open::before {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1050; /* Make sure this is higher than the modal's z-index */
-  backdrop-filter: blur(5px); /* Adjust the blur amount as needed */
-  pointer-events: none; /* Allow interaction with elements behind the overlay */
+  z-index: 1050; 
+  backdrop-filter: blur(5px);
+  pointer-events: none;
 }
 
 body.modal-open {
@@ -605,7 +647,200 @@ body.modal-open {
   display: none;
 }
 
+#overlay.modal {
+  transition: transform 0.5s ease-out;
+  transform: translateX(100%);
+}
 
+#overlay.modal.show {
+  transform: translateX(0);
+}
+
+#overlay.modal .navbar {
+  transition: transform 0.5s ease-out;
+  transform: translateX(100%);
+}
+
+#overlay.modal.show .navbar {
+  transform: translateX(0);
+}
+
+.modal .container-fluid {
+  padding: 15px 40px 40px 50px;
+}
+
+.left-menu-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-link {
+  color: #FFF;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.menu-link-small {
+  color: #D9BC9F;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+
+.vertical-line {
+  width: 5px;
+  height: 601px;
+  flex-shrink: 0;
+  background: #D9BC9F;
+  margin: 0 15px;
+}
+
+.right-menu-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.right-menu-link {
+  color: #FFF;
+  font-family: 'Manrope', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.bottom-arrow {
+  animation: bounce 2s infinite;
+}
+
+
+
+#exampleModal .modal-content {
+  background-color: #000;
+  color: #fff;
+}
+
+#exampleModal .modal-header,
+#exampleModal .modal-body,
+#exampleModal .modal-footer {
+  border: none;
+}
+
+
+#exampleModal .modal-header {
+  text-align: center;
+  display: block;
+  padding-bottom: 0;
+}
+
+#exampleModal .modal-title {
+  margin: 0 auto;
+  font-size: 42px;
+}
+
+#exampleModal .form-control {
+  border-radius: 5px;
+  background: transparent;
+  height: 60px;
+  border: 1px solid #c9c9c9;
+  color: #fff;
+}
+
+#exampleModal .form-check-input { 
+  background-color: transparent;
+  border: 1px solid #c9c9c9
+}
+#exampleModal .form-check-input:checked {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+#exampleModal .ref-button {
+  width: 100%;
+  color: #000;
+  background-color: #fff;
+  border-radius: 0;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+#exampleModal .ref-description {
+  font-size: 14px;
+  color: rgb(112, 112, 112);
+}
+
+#exampleModal .btn-close {
+  right: 25px;
+  top: 10px;
+  position: absolute;
+}
+
+
+
+.intro-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+}
+
+.intro-bottom > * {
+  animation: fadeInLeft 1s ease-out;
+}
+
+.bottom-arrow {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
 
 @media (max-width: 767px) {
   .intro-title {
@@ -623,10 +858,6 @@ body.modal-open {
 
   .intro-logo {
     display: block;
-  }
-
-  .intro-bottom {
-    margin-bottom: 245px;
   }
 
   .gallery-img-container {
@@ -857,4 +1088,48 @@ body.modal-open {
     font-weight: 300;
     letter-spacing: 2.4px;
     }
- }
+ 
+    .intro-bottom {
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 48px !important;
+    }
+
+    .left-bottom-icons {
+      gap: 48px;
+    }
+
+    .phone-bottom p {
+      display: none;
+    }
+
+    .vertical-line {
+      display: none;
+    }
+
+    .desktop-menu {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: flex !important;
+      flex-direction: column;
+    }
+
+    .menu-link {
+      font-size: 24px;
+      letter-spacing: 1.2px;
+    }
+
+    .menu-link-small {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .modal .container-fluid {
+      padding: 15px 20px 20px 20px;
+    }
+
+    .modal-bottom {
+      margin-top: 70px;
+    }
+  }
