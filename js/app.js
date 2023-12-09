@@ -30,14 +30,6 @@ var swiper1 = new Swiper(".mySwiper", {
   },
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var parallax = document.querySelector('.parallax-container');
-
-  window.addEventListener('scroll', function() {
-      var offset = window.pageYOffset;
-      parallax.style.backgroundPositionY = offset * 0.7 + 'px';
-  });
-});
 
 $('#overlay').on('show.bs.modal', function () {
   $(this).addClass('show');
@@ -47,3 +39,17 @@ $('#overlay').on('hidden.bs.modal', function () {
   $(this).removeClass('show');
 });
 
+window.addEventListener('scroll', function() {
+  const parallaxElements = document.querySelectorAll('.gallery-img-container, .gallery-youtube-container');
+  
+  parallaxElements.forEach(function(element) {
+    const scrollPosition = window.scrollY;
+    const parallaxValue = scrollPosition * 0.5; 
+
+    if (element.classList.contains('gallery-img-container')) {
+      element.style.backgroundPositionY = parallaxValue + 'px';
+    } else {
+      element.style.backgroundPositionY = -parallaxValue + 'px';
+    }
+  });
+});
