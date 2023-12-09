@@ -340,6 +340,10 @@ body::before {
   padding:  0 120px;
 }
 
+.gallery-ref-container.mobile {
+  display: none;
+}
+
 .container-bottom {
   display: flex;
   width: 100%;
@@ -512,9 +516,42 @@ body::before {
   margin-top: -75px;
 }
 
-.project-carousel {
-  justify-content: center;
-  margin-top: 65px;
+.swiper {
+  margin-top: 45px;
+}
+
+.sample-slider{
+  width: 100%;
+  margin-top: 70px;
+}
+
+.swiper-wrapper {
+  margin-bottom: 50px;
+}
+
+.sample-slider img{
+  width: 100%;
+}
+
+.swiper-pagination {
+  position: static;
+  bottom: -40px!important;
+  color: #000000;
+}
+
+.sample-slider [class^="swiper-button-"]::after{
+  content: "";
+}
+
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--swiper-pagination-color,var(--swiper-theme-color))
+}
+
+
+
+.mySwiper {
+  display: none;
 }
 
 /* Set the size of the images */
@@ -567,6 +604,8 @@ body.modal-open {
 .footer-mobile {
   display: none;
 }
+
+
 
 @media (max-width: 767px) {
   .intro-title {
@@ -699,7 +738,13 @@ body.modal-open {
 
   .gallery-ref-container .container {
     width: 100%;
-    padding: 45px 20px;
+    padding: 90px 20px;
+  }
+
+  .gallery-ref-container.mobile {
+    display: block;
+    z-index: 2;
+    position: relative;
   }
 
   .project-title-small h1 {
@@ -773,4 +818,43 @@ body.modal-open {
   .project-question .project-img {
     margin-top: 20px;
   }
+
+  .image-gallery {
+    display: none;
+  }
+
+  .gallery-ref-subtitle-main {
+    padding-bottom: 20px;
+  }
+
+  .mySwiper {
+    display: block;
+  }
+
+  .gallery-img-container.swiper {
+    width: 360px;
+    height: 286px;
+    object-fit: cover;
+  }
+
+  .swiper-button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .btn-slider {
+    display: block !important;
+    width: 90%;
+    border: 1px solid #000;
+    height: 70px;
+    text-align: center;
+    border-radius: 0;
+    color: #000;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2.4px;
+    }
  }
