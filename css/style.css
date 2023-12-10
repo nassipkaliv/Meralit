@@ -188,11 +188,13 @@ body::before {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 480px;
+  height: auto;
   margin: 0 auto;
   background-size: cover;
-  background-position: center center;
+  background-repeat: no-repeat;
 }
+
+
 
 .gallery-youtube-container {
   display: flex;
@@ -941,6 +943,7 @@ body.modal-open {
 
   .gallery-img-container {
     height: 800px;
+    background-size: cover;
   }
 
   .gallery-title {
