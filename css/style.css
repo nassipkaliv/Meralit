@@ -141,7 +141,7 @@ body::before {
 }
 
 .bottom-arrow {
-  margin-top: 150px;
+  margin-bottom: -150px;
   z-index: 1000;
   position: relative;
   cursor: pointer;
