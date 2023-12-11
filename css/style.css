@@ -96,6 +96,7 @@ body::before {
   justify-content: center;
   flex-direction: column;
   width: 80%;
+  z-index: 1000;
 }
 
 .navbar {
@@ -140,9 +141,9 @@ body::before {
 }
 
 .bottom-arrow {
-  margin-top: 180px;
-
-  z-index: 2;
+  margin-top: 150px;
+  z-index: 1000;
+  position: relative;
   cursor: pointer;
 }
 
@@ -167,7 +168,7 @@ body::before {
 
 
 .intro-bottom {
-  position: absolute;
+  position: relative;
   bottom: 0;
   text-align: center;
   width: 100%;
@@ -175,11 +176,14 @@ body::before {
   z-index: 2;
   margin: 0 auto;
   padding: 10px;
+  background: transparent;
 }
 
 .left-bottom-icons {
   gap: 20px;
 }
+
+
 
 
 
@@ -866,14 +870,6 @@ body.modal-open {
 
 
 
-.intro-bottom {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  position: absolute;
-  bottom: 20px;
-}
-
 .intro-bottom > * {
   animation: fadeInLeft 1s ease-out;
 }
@@ -894,10 +890,10 @@ body.modal-open {
 }
 
 .intro-bottom {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  position: absolute;
   bottom: 20px;
 }
 

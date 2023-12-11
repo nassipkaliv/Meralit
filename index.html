@@ -288,31 +288,30 @@
   </div>
   
 
-  <div class="intro"  style="background: url('assets/img/1.png') lightgray 50% / cover no-repeat;">
+  <div class="intro" id="intro" style="background: url('assets/img/1.png') lightgray 50% / cover no-repeat;">
     <div class="intro-content">
-      <svg class="intro-logo" xmlns="http://www.w3.org/2000/svg" width="182" height="50" viewBox="0 0 182 50" fill="none">
-        <use xlink:href="assets/icons/icons.svg#meralit-logo"></use>
-      </svg>
-      <h1 class="intro-title">Творим с душой, создаем для вас!</h1>
-      <h2 class="intro-subtitle">"МЕРАЛИТ" - эпицентр инноваций в дизайне,<br> ремонте и строительстве с 2015 года.</h2>
-      <a href="#image-gallery">
-        <svg class="bottom-arrow" xmlns="http://www.w3.org/2000/svg" width="64" height="35" viewBox="0 0 64 35" fill="none">
-          <use xlink:href="assets/icons/icons.svg#bottom-arrow"></use>
+        <svg class="intro-logo" xmlns="http://www.w3.org/2000/svg" width="182" height="50" viewBox="0 0 182 50" fill="none">
+            <use xlink:href="assets/icons/icons.svg#meralit-logo"></use>
         </svg>
-      </a>
+        <h1 class="intro-title">Творим с душой, создаем для вас!</h1>
+        <h2 class="intro-subtitle">"МЕРАЛИТ" - эпицентр инноваций в дизайне,<br> ремонте и строительстве с 2015 года.</h2>
+        <a href="#image-gallery">
+            <svg class="bottom-arrow" xmlns="http://www.w3.org/2000/svg" width="64" height="35" viewBox="0 0 64 35" fill="none">
+                <use xlink:href="assets/icons/icons.svg#bottom-arrow"></use>
+            </svg>
+        </a>
     </div>
-    <div class="intro-bottom" style="display: flex; justify-content: space-between; width: 100%; position: absolute; bottom: 20px;">
-      <div style="display: flex; align-items: center;" class="left-bottom-icons">
-          <img alt="telegram icon" src="assets/img/telegramicon.png"/>
-          <img alt="whatsapp icon" src="assets/img/whatsappicon.png" />
-      </div>
+    <div class="intro-bottom fixed-bottom d-flex p-3" id="phoneBottom">
+        <div class="left-bottom-icons d-flex align-items-center">
+            <img alt="telegram icon" src="assets/img/telegramicon.png"/>
+            <img alt="whatsapp icon" src="assets/img/whatsappicon.png" />
+        </div>
         <div class="phone-bottom">
-          <p class="px-3">Просто <br>позвонить</p>
-          <img alt="phone icon" src="assets/img/phone.png"/>
+            <p class="m-0" id="phoneText">Просто <br>позвонить</p>
+            <img alt="phone icon" src="assets/img/phone.png"/>
         </div>
     </div>
   </div>
-  
 
 
 
@@ -506,40 +505,36 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
   <script src="js/app.js"></script>
-  <!-- <script>
-    var loader;
+  <script>
+       document.addEventListener('DOMContentLoaded', function() {
+        var introSection = document.getElementById('intro');
+        var phoneText = document.getElementById('phoneText');
+        var lastScrollTop = 0;
 
-function loadNow(opacity) {
-    if (opacity <= 0) {
-        displayContent();
-    } else {
-        loader.style.opacity = opacity;
-        window.setTimeout(function() {
-            loadNow(opacity - 0.05);
-        }, 50);
-    }
-}
+        window.addEventListener('scroll', function() {
+            var st = window.pageYOffset || document.documentElement.scrollTop;
 
-function displayContent() {
-    loader.style.display = 'none';
-    document.getElementById('content').style.display = 'block';
-}
+            var introSectionRect = introSection.getBoundingClientRect();
+            var introSectionTop = introSectionRect.top;
+            var introSectionBottom = introSectionRect.bottom;
 
-document.addEventListener("DOMContentLoaded", function() {
-    loader = document.getElementById('loader');
-    loadNow(3);
-});
+            if (st > lastScrollTop) {
+                // Scrolling down
+                if (introSectionBottom <= window.innerHeight && introSectionTop >= 0) {
+                    // Inside the #intro section, show the phone text
+                    phoneText.style.opacity = '1';
+                } else {
+                    // Outside of the #intro section, hide the phone text
+                    phoneText.style.opacity = '0';
+                }
+            } else {
+                // Scrolling up, always show the phone text
+                phoneText.style.opacity = '1';
+            }
 
-document.onreadystatechange = function () {
-      if (document.readyState === 'complete') {
-        // Загрузка страницы завершена
-
-        // Добавьте класс для запуска анимации
-        document.querySelector('.intro-bottom').classList.add('animated');
-        document.querySelector('.meralit-logo').classList.add('animated');
-      }
-    };
-    
-  </script> -->
+            lastScrollTop = st <= 0 ? 0 : st;
+        });
+    });
+  </script>
 </body>
 </html>

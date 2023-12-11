@@ -254,33 +254,33 @@
     </div>
   </div>
 
-  <div class="intro"  style="background: url('assets/img/main1.jpg') lightgray 50% / cover no-repeat;">
+  <div class="intro" id="intro" style="background: url('assets/img/main1.jpg') lightgray 50% / cover no-repeat;">
     <div class="intro-content mt-5">
         <svg class="intro-logo" xmlns="http://www.w3.org/2000/svg" width="182" height="50" viewBox="0 0 182 50" fill="none">
-          <use xlink:href="assets/icons/icons.svg#meralit-logo"></use>
+            <use xlink:href="assets/icons/icons.svg#meralit-logo"></use>
         </svg>
-      <h1 class="intro-title">Это ваш - Идеальный загородный дом <br>для комфортной жизни и отдыха</h1>
-      <p class="intro-subtitle">Коттедж 2023 года постройки введен <br>
-        в эксплуатацию и готов к продаже! Расположен <br> в КП Резиденция у Озера в 21 км от КАД <br>
-        г. Санкт-Петербург</p>
-      <button class="btn btn-intro">Приехать посмотреть</button>
-      <a href="#project-container">
-        <svg class="bottom-arrow" xmlns="http://www.w3.org/2000/svg" width="64" height="35" viewBox="0 0 64 35" fill="none">
-          <use xlink:href="assets/icons/icons.svg#bottom-arrow"></use>
-        </svg>
-      </a>
+        <h1 class="intro-title">Это ваш - Идеальный загородный дом <br>для комфортной жизни и отдыха</h1>
+        <p class="intro-subtitle">Коттедж 2023 года постройки введен <br>
+            в эксплуатацию и готов к продаже! Расположен <br> в КП Резиденция у Озера в 21 км от КАД <br>
+            г. Санкт-Петербург</p>
+        <button class="btn btn-intro">Приехать посмотреть</button>
+        <a href="#project-container">
+            <svg class="bottom-arrow" xmlns="http://www.w3.org/2000/svg" width="64" height="35" viewBox="0 0 64 35" fill="none" style="margin-top: 50px">
+                <use xlink:href="assets/icons/icons.svg#bottom-arrow"></use>
+            </svg>
+        </a>
     </div>
-    <div class="intro-bottom" style="display: flex; justify-content: space-between; width: 100%; position: absolute; bottom: 20px;">
-      <div style="display: flex; align-items: center;" class="left-bottom-icons">
-          <img alt="telegram icon" class="img-fluid" src="assets/img/telegramicon.png"/>
-          <img alt="whatsapp icon" class="img-fluid" src="assets/img/whatsappicon.png" />
+    <div class="intro-bottom fixed-bottom d-flex p-3" id="phoneBottom">
+      <div class="left-bottom-icons d-flex align-items-center">
+          <img alt="telegram icon" src="assets/img/telegramicon.png"/>
+          <img alt="whatsapp icon" src="assets/img/whatsappicon.png" />
       </div>
-        <div class="phone-bottom">
-          <p class="px-3">Просто <br>позвонить</p>
-          <img alt="phone icon" class="img-fluid" src="assets/img/phone.png"/>
-        </div>
-    </div>
+      <div class="phone-bottom">
+          <p class="m-0" id="phoneText">Просто <br>позвонить</p>
+          <img alt="phone icon" src="assets/img/phone.png"/>
+      </div>
   </div>
+</div>
 
 <div class="project-container" id="project-container">
   <div class="project-title">
@@ -1043,6 +1043,37 @@ document.onreadystatechange = function () {
         document.querySelector('.intro-bottom').classList.add('animated');
       }
     };
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var introSection = document.getElementById('intro');
+        var phoneText = document.getElementById('phoneText');
+        var lastScrollTop = 0;
+
+        window.addEventListener('scroll', function() {
+            var st = window.pageYOffset || document.documentElement.scrollTop;
+
+            var introSectionRect = introSection.getBoundingClientRect();
+            var introSectionTop = introSectionRect.top;
+            var introSectionBottom = introSectionRect.bottom;
+
+            if (st > lastScrollTop) {
+                // Scrolling down
+                if (introSectionBottom <= window.innerHeight && introSectionTop >= 0) {
+                    // Inside the #intro section, show the phone text
+                    phoneText.style.opacity = '1';
+                } else {
+                    // Outside of the #intro section, hide the phone text
+                    phoneText.style.opacity = '0';
+                }
+            } else {
+                // Scrolling up, always show the phone text
+                phoneText.style.opacity = '1';
+            }
+
+            lastScrollTop = st <= 0 ? 0 : st;
+        });
+    });
+
   </script>
 </body>
 </html>
