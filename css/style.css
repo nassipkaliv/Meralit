@@ -258,21 +258,22 @@ body::before {
   align-items: center;
   justify-content: center;
   position: static;
+  padding: 80px;
+  z-index: 2;
 }
 
 .footer-logo {
-  margin-top: 70px;
   z-index: 2;
 }
 
 .social-media-logo {
-  margin-top: 60px;
-  margin-bottom: 40px;
   display: flex;
   flex-direction: row;
   gap: 46.5px;
   z-index: 2;
   cursor: pointer;
+  margin-top: 45px;
+  margin-bottom: 35px;
 }
 
 .footer-description {
@@ -282,7 +283,6 @@ body::before {
   font-weight: 400;
   letter-spacing: 0.24px;
   text-transform: uppercase;
-  margin-bottom: 160px;
   z-index: 2;
 }
 
@@ -962,12 +962,14 @@ body.modal-open {
     flex-direction: column;
     position: static;
     padding: 40px 20px;
+    z-index: 2;
   }
 
   .footer-mobile .footer-logo {
     text-align: left;
     margin-top: 0;
     margin-bottom: 50px;
+    z-index: 2;
   }
 
   .footer-menu {
@@ -975,6 +977,7 @@ body.modal-open {
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
+    z-index: 2;
     z-index: 2;
   }
 
@@ -986,13 +989,13 @@ body.modal-open {
     letter-spacing: 1.2px;
     text-transform: uppercase;
     text-decoration: none;
-    padding-bottom: 23px;  
+    z-index: 2;
   }
 
   .footer-description-list {
     display: flex;
     flex-direction: column;
-    margin-bottom: 35px;
+    z-index: 2;
   }
 
   .footer-description-item {
@@ -1001,16 +1004,19 @@ body.modal-open {
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
+    z-index: 2;
   }
 
   .social-media-logo {
-    margin: 0;
+    margin-top: -45px;
+    margin-bottom: 0;
   }
 
   .scroll-to-top-button {
-    position: absolute;
+    position: relative;
+    margin-left: auto;
     bottom: 50px;
-    z-index: 2;
+    z-index: 1000;
     right: 10px;
     border: none;
   }
