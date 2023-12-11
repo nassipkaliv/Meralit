@@ -1087,7 +1087,7 @@ body.modal-open {
   }
 
   .project-infrastructure-mobile {
-    display: block;
+    display: block !important ;
   }
 
   .project-infrastructure-mobile .project-description {

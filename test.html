@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Parallax Effect Example</title>
+
+  <style>
+    /* Add your styles here */
+    .parallax-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .parallax-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      perspective: 1px;
+      z-index: 2;
+    }
+
+    .gallery-left-block,
+    .gallery-right-block {
+      transition: transform 0.3s ease-out;
+    }
+
+    .row {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="parallax-container">
+    <div class="parallax-layer">
+      <div class="row">
+        <div class="gallery-left-block px-0 col-md-6 col-sm-12">
+          <div class="gallery-img-container" style="background: url('assets/img/2.png') lightgray 50% / cover no-repeat; height: 847px;">
+            <div class="gallery-img-overlay"></div>
+            <h1 class="gallery-title">Апартаменты на Невском</h1>
+            <p class="gallery-subtitle">Под ключ - от дизайна до полной реализации</p>
+          </div>
+          <div class="gallery-img-container" style="background: url('assets/img/4.png') lightgray 50% / cover no-repeat; height: 853px;">
+            <h1 class="gallery-title">Оптимизация бюджета. Дизайн-проект</h1>
+            <p class="gallery-subtitle">Серьезная экономия при правильном подходе</p>
+          </div>
+          <div class="gallery-img-container" style="background: url('assets/img/6.png') lightgray 50% / cover no-repeat; height: 825px;">
+            <h1 class="gallery-title">Строго по регламенту</h1>
+            <p class="gallery-subtitle">Реальная польза от структурирования рабочих процессов</p>
+          </div>
+          <div class="gallery-img-container" style="background: url('assets/img/8.png') lightgray 50% / cover no-repeat; height: 800px;">
+            <h1 class="gallery-title">Консультации перед ремонтом</h1>
+            <p class="gallery-subtitle">Или, как учесть все детали…</p>
+          </div>
+        </div>
+        <div class="gallery-right-block px-0 col-md-6 col-sm-12">
+          <div class="gallery-img-container" style="background: url('assets/img/3.png') lightgray 50% / cover no-repeat; height: 479px;">
+            <h1 class="gallery-title">Ремонт с чего начать?</h1>
+            <p class="gallery-subtitle">Важные нюансы от профессионалов</p>
+          </div>
+          <div class="gallery-img-container" style="background: url('assets/img/5.png') lightgray 50% / cover no-repeat; height: 790px;">
+            <h1 class="gallery-title">Презентация онлайн или вживую</h1>
+            <p class="gallery-subtitle">Презентация онлайн или вживую</p>
+          </div>
+          <div class="gallery-img-container" style="background: url('assets/img/7.png') lightgray 50% / cover no-repeat; height: 704px;">
+            <h1 class="gallery-title">Аппартаменты на Петроградке</h1>
+            <p class="gallery-subtitle">Под ключ - от дизайна до полной реализации</p>
+          </div>
+          <div class="gallery-img-container" style="background: url('assets/img/9.png') lightgray 50% / cover no-repeat; height: 797px;">
+            <h1 class="gallery-title">Сервис для клиентов</h1>
+            <p class="gallery-subtitle">Дополнительные услуги от компании Meralit</p>
+          </div>
+          <div class="gallery-img-container" style="background: url('assets/img/11.png') lightgray 50% / cover no-repeat; height: 555px;">
+            <h1 class="gallery-title">Наши кейсы</h1>
+            <p class="gallery-subtitle">Часть наших работ, включая ремонтные работы и строительство объектов под ключ</p>
+          </div>
+        </div>
+    
+        <div class="col-12 gallery-youtube-container" style="background: url('assets/img/12.png') lightgray 50% / cover no-repeat;">
+          <h1 class="gallery-title">Готовые решения</h1>
+          <p class="gallery-subtitle">Мы не только ремонтируем, <br> но и строим</p>
+          <svg class="youtube-logo" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none">
+            <use xlink:href="assets/icons/icons.svg#youtube-logo"></use>
+          </svg>
+        </div>
+    
+        <div class="gallery-left-block px-0 col-md-6 col-sm-12">
+          <div class="gallery-img-container" style="background: url('assets/img/13.png') lightgray 50% / cover no-repeat; height: 800px;">
+            <h1 class="gallery-title">Коттедж в “Резиденции у Озера”</h1>
+            <p class="gallery-subtitle">Продажа объекта</p>
+          </div>
+          <div class="gallery-img-container" style="background: url('assets/img/15.png') lightgray 50% / cover no-repeat; height: 900px;">
+            <h1 class="gallery-title">Продумано на десятилетия вперед</h1>
+            <p class="gallery-subtitle">BIM проектирование и его реальная польза</p>
+          </div>
+        </div>
+        <div class="gallery-right-block px-0 col-md-6 col-sm-12">
+          <div class="gallery-img-container" style="background: url('assets/img/14.png') lightgray 50% / cover no-repeat; height: 457px;">
+            <h1 class="gallery-title">Видео отзывы о Мералит</h1>
+            <p class="gallery-subtitle">Реальные отзывы от наших клиентов</p>
+          </div>
+          <div class="gallery-img-container" style="background: url('assets/img/18.png') lightgray 50% / cover no-repeat; height: 426px;">
+            <h1 class="gallery-title">Логистика и хранение материалов</h1>
+            <p class="gallery-subtitle">Закуп, ответственное хранение и поэтапная доставка на объект</p>
+          </div>
+          <div class="gallery-img-container" style="background: url('assets/img/16.png') lightgray 50% / cover no-repeat; height: 427px;">
+            <h1 class="gallery-title">Ремонт и чистота на объекте</h1>
+            <p class="gallery-subtitle">Наглядное отношение специалистов к своей работе</p>
+          </div>
+          <div class="gallery-img-container" style="background: url('assets/img/17.png') lightgray 50% / cover no-repeat; height: 390px;">
+            <h1 class="gallery-title">Техническое сопровождение объекта</h1>
+            <p class="gallery-subtitle">Комлексное обслуживание в рамках одного договора</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var parallaxContainer = document.querySelector('.parallax-container');
+      var leftBlock = document.querySelector('.gallery-left-block');
+      var rightBlock = document.querySelector('.gallery-right-block');
+
+      if (parallaxContainer && leftBlock && rightBlock) {
+        parallaxContainer.addEventListener('scroll', function () {
+          var scrollPosition = parallaxContainer.scrollTop;
+
+          leftBlock.style.transform = 'translateY(' + scrollPosition / 2 + 'px)';
+          rightBlock.style.transform = 'translateY(' + scrollPosition / 2 + 'px)';
+          console.log("Parallax working!");
+        });
+      } else {
+        console.error('One or more elements not found.');
+      }
+    });
+  </script>
+
+</body>
+</html>
