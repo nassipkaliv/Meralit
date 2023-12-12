@@ -821,6 +821,15 @@ body.modal-open {
 }
 
 
+.modal-slide-from-left .modal-dialog {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.modal-slide-from-left.show .modal-dialog {
+  transform: translateX(0);
+}
+
 
 #exampleModal .modal-content {
   background-color: #000;

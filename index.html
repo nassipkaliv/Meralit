@@ -18,11 +18,12 @@
   
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container-fluid">
-      <button type="button" class="faq-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="button" class="faq-button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">
         <svg class="faq-button-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50" fill="none">
-          <use xlink:href="assets/icons/icons.svg#Faq"></use>
+           <use xlink:href="assets/icons/icons.svg#Faq"></use>
         </svg>
-      </button>
+     </button>
+     
       
       <a class="navbar-brand mx-auto" href="#">
         <svg class="meralit-logo" id="meralit-logo" xmlns="http://www.w3.org/2000/svg" width="182" height="50" viewBox="0 0 182 50" fill="none">
@@ -69,7 +70,7 @@
     </div>
   </nav>
 
-  <div class="modal modal-slide" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal modal-slide modal-slide-from-left" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
@@ -78,7 +79,7 @@
                     d="M11.9998 15.0048L19.5123 22.5188C19.911 22.9174 20.4517 23.1413 21.0154 23.1413C21.5792 23.1413 22.1199 22.9174 22.5185 22.5188C22.9172 22.1201 23.1411 21.5794 23.1411 21.0157C23.1411 20.4519 22.9172 19.9112 22.5185 19.5126L15.0031 12L22.5171 4.48742C22.7144 4.29003 22.8709 4.05572 22.9776 3.79785C23.0844 3.53999 23.1393 3.26363 23.1392 2.98454C23.1391 2.70546 23.0841 2.42912 22.9772 2.17131C22.8704 1.9135 22.7138 1.67926 22.5164 1.48196C22.319 1.28467 22.0847 1.12818 21.8268 1.02144C21.569 0.914704 21.2926 0.859799 21.0135 0.859865C20.7344 0.859931 20.4581 0.914965 20.2003 1.02183C19.9425 1.12869 19.7082 1.28528 19.5109 1.48267L11.9998 8.99525L4.48718 1.48267C4.29125 1.27962 4.05685 1.11763 3.79764 1.00614C3.53844 0.894646 3.25962 0.835895 2.97747 0.833311C2.69531 0.830727 2.41547 0.884361 2.15427 0.991085C1.89306 1.09781 1.65573 1.25548 1.45611 1.45491C1.2565 1.65434 1.0986 1.89152 0.99163 2.15263C0.88466 2.41373 0.830762 2.69352 0.83308 2.97568C0.835397 3.25783 0.893885 3.5367 1.00513 3.79601C1.11638 4.05532 1.27815 4.28988 1.48101 4.486L8.99643 12L1.48243 19.5126C1.08379 19.9112 0.859834 20.4519 0.859834 21.0157C0.859834 21.5794 1.08379 22.1201 1.48243 22.5188C1.88107 22.9174 2.42175 23.1413 2.98552 23.1413C3.54928 23.1413 4.08996 22.9174 4.4886 22.5188L11.9998 15.0033V15.0048Z"
                     fill="white" />
             </svg>
-        </button>
+          </button>
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Оставить заявку</h5>
           </div>
@@ -542,6 +543,12 @@
             lastScrollTop = st <= 0 ? 0 : st;
         });
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+
+      myModal.show();
+   });
   </script>
 </body>
 </html>
