@@ -713,9 +713,17 @@ body.modal-open {
   display: none;
 }
 
+.mySwiper .gallery-img-container {
+  height: 360px !important;
+}
+
 #overlay.modal {
   transition: transform 0.5s ease-out;
   transform: translateX(100%);
+}
+
+#overlay.modal a:hover {
+  color: #fff;
 }
 
 #overlay.modal.show {
@@ -959,7 +967,7 @@ body.modal-open {
   }
 
   .gallery-img-container {
-    height: 800px;
+    height: 800px !important;
     background-size: cover;
   }
 
@@ -1246,5 +1254,9 @@ body.modal-open {
     .burger-menu-icon {
       width: 30px;
       height: 30px;
+    }
+
+    #overlay.modal {
+      overflow: hidden;
     }
   }
