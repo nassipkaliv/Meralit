@@ -38,7 +38,7 @@ body::before {
 }
 
 .preloader__image {
-  width: 100px; /* Adjust the width and height as needed */
+  width: 100px;
   height: 100px;
 }
 
@@ -71,6 +71,8 @@ body::before {
 #loader.active + #content {
   display: block;
 }
+
+
 
 
 .intro {
