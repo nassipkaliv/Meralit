@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;800&display=swap');
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 body {
   font-family: 'Manrope', sans-serif;
   color: #fff;
@@ -19,6 +23,15 @@ body::before {
   background: rgba(0, 0, 0, 0.50); 
   z-index: 1;
 }
+
+.section {
+  scroll-snap-align: start;
+  background-attachment: scroll;
+
+}
+
+
+
 
 .preloader {
   display: flex;
@@ -71,6 +84,7 @@ body::before {
 #loader.active + #content {
   display: block;
 }
+
 
 
 
@@ -947,6 +961,10 @@ body.modal-open {
     transform: translateY(-10px);
   }
 }
+
+
+
+
 
 @media (max-width: 767px) {
   .intro-title {
