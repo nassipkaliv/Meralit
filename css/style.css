@@ -723,9 +723,6 @@ body.modal-open {
 }
 
 
-.footer-mobile {
-  display: none;
-}
 
 .mySwiper .gallery-img-container {
   height: 360px !important;
@@ -848,14 +845,20 @@ body.modal-open {
   transition: transform 0.5s ease-in-out;
 }
 
-.modal-slide-from-left.show .modal-dialog {
-  transform: translateX(0);
+
+.left-bottom-icons {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
+.left-bottom-icons.hidden-icons {
+  opacity: 0;
+}
 
 #exampleModal .modal-content {
   background-color: #000;
   color: #fff;
+  padding: 10px;
 }
 
 #exampleModal .modal-header,
@@ -967,6 +970,11 @@ body.modal-open {
 
 
 @media (max-width: 767px) {
+
+  .intro {
+    background-attachment: scroll;
+  }
+
   .intro-title {
     font-size: 16px;
     letter-spacing: 0.8px;
@@ -987,6 +995,7 @@ body.modal-open {
   .gallery-img-container {
     height: 800px !important;
     background-size: cover;
+    background-attachment: scroll;
   }
 
   .gallery-title {
@@ -999,78 +1008,8 @@ body.modal-open {
     letter-spacing: 2.56px;
   }
 
-  .footer {
-    display: none;
-  }
-
-  .footer-mobile {
-    display: block;
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    position: static;
-    padding: 40px 20px;
-    z-index: 2;
-  }
-
-  .footer-mobile .footer-logo {
-    text-align: left;
-    margin-top: 0;
-    margin-bottom: 50px;
-    z-index: 2;
-  }
-
-  .footer-menu {
-    margin-top: 10px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
-    z-index: 2;
-  }
-
-  .footer-menu-item {
-    color: #FFF;
-    font-family: 'Manrope', sans-serif;
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    text-decoration: none;
-    z-index: 2;
-  }
-
-  .footer-description-list {
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
-  }
-
-  .footer-description-item {
-    color: #D9BC9F;
-    font-family: 'Manrope', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: none;
-    z-index: 2;
-  }
-
-  .social-media-logo {
-    margin-top: -45px;
-    margin-bottom: 0;
-  }
-
-  .scroll-to-top-button {
-    position: relative;
-    margin-left: auto;
-    bottom: 50px;
-    z-index: 1000;
-    right: 10px;
-    border: none;
-  }
-
-  .btn-intro {
+ 
+   .btn-intro {
     width: 210px;
     color: #FFF;
     font-family: 'Manrope', sans-serif;
