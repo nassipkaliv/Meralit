@@ -5,41 +5,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Meralit - Main</title>
-  
-  </head>
-<body style="background: #fff !important;">
+    <style>
 
-  <div class="lists">
+      body {
+        background: #fff !important; 
+        color:#999999;
+      }
+
+      body::before {
+        background: none;
+      }
+
+      .lists {
+        z-index: 2;
+        position: absolute;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+  
+        justify-content: center;
+      }
+      
+      .dash-list {
+        list-style-type: none;
+        color:#999999;
+      }
+      .dash-list li:before {
+        content: '\2014';
+        position: absolute;
+        margin-left: -20px;
+      }
+
+      li::marker {
+        color: #212529;
+      }
+
+      a {
+        color: #999999;
+      }
+    </style>
+  </head>
+<body>
+  <div class="lists my-4">
+    1.
     <ul>
-      <li>Наш технический консультант поможет вам сделать правильный выбор перед тем, как приступать к дизайн-проекту</li>
-      <li>Технический консультант предложит оптимальную последовательность действии с минимальными рисками</li>
+      <li class="my-2">Наш технический консультант поможет вам сделать правильный выбор перед тем, как приступать к дизайн-проекту</li>
+      <li class="my-2">Технический консультант предложит оптимальную последовательность действии с минимальными рисками</li>
     </ul>
 
-    <ul>
+    2.
+    <ul class="dash-list">
       <li>По цене</li>
       <li>По срокам</li>
       <li>По качеству</li>
       <li>По дальнейшему обсулижванию</li>
     </ul>
 
+    3.
     <ol>
-      <li>В "Оптиме! исключены архитектурные и технические излишества, увеличивающие стоимость и риски для клиента</li>
-      <li>Меньше зависимость от санкций</li>
-      <li>Меншье зависимость от материалов. "Оптима" больше ориентирована на внтуренний рынок комплектующих, а не на зарубежный</li>
-      <li>Меньше номенклатура, то есть количество материалов - соответственно меньше вероятность сбоев в поставках.</li>
-      <li>Меньше подрядчиков участвует в преокте. Следовательно, меньше зависимость от сбоев в работе у этих подрядчиков</li>
+      <li class="my-2">В "Оптиме! исключены архитектурные и технические излишества, увеличивающие стоимость и риски для клиента</li>
+      <li class="my-2">Меньше зависимость от санкций</li>
+      <li class="my-2">Меншье зависимость от материалов. "Оптима" больше ориентирована на внтуренний рынок комплектующих, а не на зарубежный</li>
+      <li class="my-2">Меньше номенклатура, то есть количество материалов - соответственно меньше вероятность сбоев в поставках.</li>
+      <li class="my-2">Меньше подрядчиков участвует в преокте. Следовательно, меньше зависимость от сбоев в работе у этих подрядчиков</li>
     </ol>
 
-
+    4.
     <p>
       Дизайнерские ремонт, который вы ранее подбирали для себя, сейчас многократно подорожал, и на этом фоне "Оптима" все более востребованной
     </p>
     <p>
-      Многие наши клиенты переходят на "Оптиму" в связи с экономической ситуацией в стране. После <a href="#index.html#exampleModal">консультации</a> с нашими техническим специалистом они выбирают "Оптиму" вместо дизайнерского  ремонта по следующим причинам.
+      Многие наши клиенты переходят на "Оптиму" в связи с экономической ситуацией в стране. После <a href="index.html#exampleModal"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">консультации</a> с нашими техническим специалистом они выбирают "Оптиму" вместо дизайнерского  ремонта по следующим причинам.
     </p>
-  </div>
+
+    5.
+    <p>
+      <i class="my-2">
+        " Здравсвтуйте, меня зовут Алексей. Я мечтал создать лучшую команду по отделке и ремонту. Прошло около 10 лет, и мы зашли даже дальше, теперь компания обеспечивает все направления процесса от дизайна до комплектации и ремонта... "
+      </i>
+    </p>
+    6.
+    <p class="text-uppercase text-dark">Разарабатывая данный продукт мы учли: цены, санкции, логистику.</p>
   
+    7. 
+    <div class="footer" id="footer">
+  
+      <div class="text-center">
+        <p>Полезно? <br>
+        Поделитесь пожалуйста
+        </p>
+      </div>
+      <div class="social-media-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <use xlink:href="assets/icons/icons.svg#vk-logo"></use>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
+          <use xlink:href="assets/icons/icons.svg#telegram-logo"></use>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <use xlink:href="assets/icons/icons.svg#facebook-logo"></use>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
+          <use xlink:href="assets/icons/icons.svg#instagram-logo"></use>
+        </svg>
+      </div>
+      <p class="footer-description">© 2023 | ООО “Арт - студия “зробим” . УНП 191619308</p>
+    </div>
+    
+    8.
+    <div class="youtube-container d-flex flex-column flex-wrap align-content-center">
+      <h2 class="text-uppercase text-dark text-center">о forcemontage за 3 минуты</h2>
+      <iframe width="1092" height="614" src="https://www.youtube.com/embed/-SHvWfXsKu8" title="Почему Forcemontage? | Отзыв заказчицы Ольги" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  
+    9.
+    <div class="youtube-container d-flex flex-column flex-wrap align-content-center">
+      <h2 class="text-dark text-center">Андрей Мерзликин</h2>
+      <p class="text-center text-dark">(Актер)</p>
+      <img src="assets/img/1.png" class="img-fluid" alt="img" />
+    </div>
+
+  </div>
+
+
+
+
+  <div class="modal modal-slide modal-slide-from-left" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M11.9998 15.0048L19.5123 22.5188C19.911 22.9174 20.4517 23.1413 21.0154 23.1413C21.5792 23.1413 22.1199 22.9174 22.5185 22.5188C22.9172 22.1201 23.1411 21.5794 23.1411 21.0157C23.1411 20.4519 22.9172 19.9112 22.5185 19.5126L15.0031 12L22.5171 4.48742C22.7144 4.29003 22.8709 4.05572 22.9776 3.79785C23.0844 3.53999 23.1393 3.26363 23.1392 2.98454C23.1391 2.70546 23.0841 2.42912 22.9772 2.17131C22.8704 1.9135 22.7138 1.67926 22.5164 1.48196C22.319 1.28467 22.0847 1.12818 21.8268 1.02144C21.569 0.914704 21.2926 0.859799 21.0135 0.859865C20.7344 0.859931 20.4581 0.914965 20.2003 1.02183C19.9425 1.12869 19.7082 1.28528 19.5109 1.48267L11.9998 8.99525L4.48718 1.48267C4.29125 1.27962 4.05685 1.11763 3.79764 1.00614C3.53844 0.894646 3.25962 0.835895 2.97747 0.833311C2.69531 0.830727 2.41547 0.884361 2.15427 0.991085C1.89306 1.09781 1.65573 1.25548 1.45611 1.45491C1.2565 1.65434 1.0986 1.89152 0.99163 2.15263C0.88466 2.41373 0.830762 2.69352 0.83308 2.97568C0.835397 3.25783 0.893885 3.5367 1.00513 3.79601C1.11638 4.05532 1.27815 4.28988 1.48101 4.486L8.99643 12L1.48243 19.5126C1.08379 19.9112 0.859834 20.4519 0.859834 21.0157C0.859834 21.5794 1.08379 22.1201 1.48243 22.5188C1.88107 22.9174 2.42175 23.1413 2.98552 23.1413C3.54928 23.1413 4.08996 22.9174 4.4886 22.5188L11.9998 15.0033V15.0048Z"
+                    fill="white" />
+            </svg>
+          </button>
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Оставить заявку</h5>
+          </div>
+            <div class="modal-body pt-4">
+                <form>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Ваше имя">
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control" id="mobile" placeholder="Ваш номер телефона">
+                    </div>
+                    <p>Предпочитаемый способ свзяи</p>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="checkbox1">
+                        <label class="form-check-label" for="checkbox1">Позвонить</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="checkbox2">
+                        <label class="form-check-label" for="checkbox2">Написать Telegram</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="checkbox3">
+                        <label class="form-check-label" for="checkbox3">Написать Whatsapp</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer d-flex justify-content-center pt-0 ">
+                <button type="button" class="btn btn-block w-100 ref-button">Отправить заявку</button>
+                <p class="text-center ref-description my-2">Нажимая на кнопку "Получить консультацию" вы даете свое согласие на обработку персональных данных</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
