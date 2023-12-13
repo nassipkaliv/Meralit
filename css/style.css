@@ -308,6 +308,7 @@ body::before {
   z-index: 1000;
   border: none;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 
@@ -958,8 +959,18 @@ body.modal-open {
   }
 }
 
+.icon {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
 
+.icon:hover {
+  opacity: 0.8;
+}
 
+.btn:hover {
+  color: #fff;
+}
 
 
 @media (max-width: 767px) {
@@ -1196,10 +1207,6 @@ body.modal-open {
       margin-top: 70px;
     }
 
-    .faq-button-icon {
-      width: 30px;
-      height: 30px;
-    }
 
     .burger-menu-icon {
       width: 30px;

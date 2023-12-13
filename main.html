@@ -298,21 +298,21 @@
         <p class="intro-subtitle">Коттедж 2023 года постройки введен <br>
             в эксплуатацию и готов к продаже! Расположен <br> в КП Резиденция у Озера в 21 км от КАД <br>
             г. Санкт-Петербург</p>
-        <button class="btn btn-intro">Приехать посмотреть</button>
+        <button class="btn btn-intro" id="btn-scroll">Приехать посмотреть</button>
         <a href="#project-container">
-            <svg class="bottom-arrow" xmlns="http://www.w3.org/2000/svg" width="64" height="35" viewBox="0 0 64 35" fill="none" style="margin-top: 50px">
+            <svg class="bottom-arrow" xmlns="http://www.w3.org/2000/svg" width="64" height="35" viewBox="0 0 64 35" fill="none">
                 <use xlink:href="assets/icons/icons.svg#bottom-arrow"></use>
             </svg>
         </a>
     </div>
     <div class="intro-bottom fixed-bottom d-flex p-3" id="phoneBottom">
       <div class="left-bottom-icons d-flex align-items-center">
-          <img alt="telegram icon" src="assets/img/telegramicon.png"/>
-          <img alt="whatsapp icon" src="assets/img/whatsappicon.png" />
+          <img alt="telegram icon" class="icon" src="assets/img/telegramicon.png"/>
+          <img alt="whatsapp icon" class="icon" src="assets/img/whatsappicon.png" />
       </div>
       <div class="phone-bottom">
           <p class="m-0" id="phoneText">Просто <br>позвонить</p>
-          <img alt="phone icon" src="assets/img/phone.png"/>
+          <img alt="phone icon" class="icon" src="assets/img/phone.png"/>
       </div>
   </div>
   </div>
@@ -636,7 +636,7 @@
 
 
 
-<div class="image-gallery section">
+<div class="image-gallery section" id="image-gallery">
   <div class="row">
     <div class="col-lg-6 col-sm-12 gallery-img-container" style="background-image: url('assets/img/main2.png')">
       <div class="gallery-img-overlay"></div>
@@ -671,7 +671,7 @@
           бизнеса
           </p>
         <div class="container-bottom">
-          <button class="btn btn-gallery-ref">Оставить заявку</button>
+          <button class="btn btn-gallery-ref" data-toggle="modal" data-target="#exampleModal">Оставить заявку</button>
           <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
             <use xlink:href="assets/icons/icons.svg#ref-arrow-left"></use>
           </svg>
@@ -685,7 +685,7 @@
           и интеллектуальные инновации
           </p>
         <div class="container-bottom">
-          <button class="btn btn-gallery-ref">Записаться</button>
+          <button class="btn btn-gallery-ref" data-toggle="modal" data-target="#exampleModal">Записаться</button>
           <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
             <use xlink:href="assets/icons/icons.svg#ref-arrow-right"></use>
           </svg>
@@ -699,7 +699,7 @@
     </div>
     <div class="col-lg-6 col-sm-12 gallery-img-container" style="background-image: url('../assets/img/main6.png')">
       <h2 class="gallery-title">терраса</h2>
-      <p` class="gallery-subtitle-main">Уличная терраса <br>
+      <p class="gallery-subtitle-main">Уличная терраса <br>
         с выходом из кухни-гостиной <br>на свежем воздухе</p>
     </div>
     <div class="col-lg-6 col-sm-12 gallery-img-container" style="background-image: url('../assets/img/main7.png')">
@@ -722,7 +722,7 @@
           ваши интересы и желания
         </p>
         <div class="container-bottom">
-          <button class="btn btn-gallery-ref">Оставить заявку</button>
+          <button class="btn btn-gallery-ref" data-toggle="modal" data-target="#exampleModal">Оставить заявку</button>
           <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
             <use xlink:href="assets/icons/icons.svg#ref-arrow-left"></use>
           </svg>
@@ -766,7 +766,7 @@
       бизнеса
       </p>
     <div class="container-bottom">
-      <button class="btn btn-gallery-ref">Оставить заявку</button>
+      <button class="btn btn-gallery-ref" data-toggle="modal" data-target="#exampleModal">Оставить заявку</button>
       <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
         <use xlink:href="assets/icons/icons.svg#ref-arrow-left"></use>
       </svg>
@@ -805,7 +805,7 @@
               </ul>
             </div>
           </div>
-          <button class="btn btn-project">Записаться</button>
+          <button class="btn btn-project" data-toggle="modal" data-target="#exampleModal">Записаться</button>
         </div>
       </div>
     </div>
@@ -830,7 +830,7 @@
             <li>Велосипедная дорожка</li>
           </ul>
           <p>Близость к городу: поселок расположен в 21 км от КАД</p>
-          <button class="btn btn-project">Записаться</button>
+          <button class="btn btn-project" data-toggle="modal" data-target="#exampleModal">Записаться</button>
         </div>
       </div>
     </div>
@@ -851,7 +851,7 @@
             <li>Велосипедная дорожка</li>
           </ul>
           <p>Близость к городу: поселок расположен в 21 км от КАД</p>
-          <button class="btn btn-project">Записаться</button>
+          <button class="btn btn-project" data-toggle="modal" data-target="#exampleModal">Записаться</button>
         </div>
   </div>
   
@@ -868,7 +868,7 @@
           <p>Лесные участки в 21 км от Петербурга. К вашим услугам – развитая инфраструктура района</p>
           <p><a class="a-link" href="https://yandex.ru/maps/?ll=30.452057%2C60.215241&mode=search&sll=30.542014%2C60.195271&text=60.195271%2C30.542014&z=12">Проложить маршрут в Яндекс.Картах</a></p>
           <p><a href="https://yandex.ru/maps/?ll=30.452057%2C60.215241&mode=search&sll=30.542014%2C60.195271&text=60.195271%2C30.542014&z=12">Санкт-Петербург – 21 км<br> КАД – 21 км</a></p>
-          <button class="btn btn-project big">Записаться</button>
+          <button class="btn btn-project big" data-toggle="modal" data-target="#exampleModal">Записаться</button>
         </div>
       </div>
       <div class="col-md-7 col-sm-12 px-0 project-location-img-container">
@@ -928,7 +928,7 @@
           <p class="mb-0 ml-2">Прислать каталог в Telegram</p>
         </div>
         
-        <button class="btn btn-project">Оставить заявку</button>
+        <button class="btn btn-project" data-toggle="modal" data-target="#exampleModal">Оставить заявку</button>
       </div>
       <div class="col-md-7 col-sm-12 px-0 project-img">
         <img class="img-fluid w-100" src="assets/img/questionimg.png" alt="plan" />

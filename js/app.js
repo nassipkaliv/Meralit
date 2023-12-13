@@ -41,3 +41,18 @@ $('#overlay').on('hidden.bs.modal', function () {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  
+  var button = document.getElementById('btn-scroll');
+  var targetElement = document.getElementById('image-gallery');
+
+  
+  button.addEventListener('click', function() {
+    
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+
+
+
