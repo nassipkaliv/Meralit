@@ -147,6 +147,7 @@ body::before {
   letter-spacing: 2.4px;
   margin-top: 23px;
   margin-bottom: 35px;
+  z-index: 2;
 }
 
 @media (max-width: 767px) {
@@ -246,9 +247,9 @@ body::before {
   color: #FFF;
   text-align: center;
   font-family: 'Manrope', sans-serif;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 300;
-  letter-spacing: 5.12px;
+  letter-spacing: 2.4px;
   text-transform: uppercase;
   z-index: 2;
   width: 70%;
@@ -331,7 +332,7 @@ body::before {
   color: #000;
 }
 
-.project-title h1 {
+.project-title h2 {
   color: #000;
   font-size: 72px;
   font-weight: 800;
@@ -529,14 +530,6 @@ body::before {
 }
 
 
-.project-title-small h1{
-  color: #000;
-  font-family: 'Manrope', sans-serif;
-  font-size: 48px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
 .a-link {
   color: #9FA1A7 !important;
   font-family: 'Manrope', sans-serif;
@@ -554,7 +547,7 @@ body::before {
   padding-left: 0;
 }
 
-.project-title-small h1 {
+.project-title-small h2 {
   color: #000;
   font-family: 'Manrope', sans-serif;
   font-size: 48px;
@@ -563,11 +556,11 @@ body::before {
   text-transform: uppercase;
 }
 
-.project-title-small .h1-color {
+.project-title-small .h2-color {
   color: #D9BC9F !important; 
 }
 
-.project-title-small .h1-phone-number {
+.project-title-small .h2-phone-number {
   font-weight: 500 !important;
 }
 
@@ -1023,7 +1016,7 @@ body.modal-open {
     padding: 35px 10px;
   }
 
-  .project-title h1{
+  .project-title h2{
     color: #000;
     font-size: 24px;
     font-weight: 800;
@@ -1048,7 +1041,7 @@ body.modal-open {
     position: relative;
   }
 
-  .project-title-small h1 {
+  .project-title-small h2 {
     font-size: 24px;
     font-weight: 800;
   }
@@ -1108,7 +1101,7 @@ body.modal-open {
     margin-top: 35px;
   }
   
-  .project-question .project-title-small h1 {
+  .project-question .project-title-small h2 {
     line-height: 146.162%;
   }
 
