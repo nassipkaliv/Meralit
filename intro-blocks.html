@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Meralit - Main</title>
     <style>
@@ -44,6 +45,42 @@
 
       a {
         color: #999999;
+      }
+
+      .infographic-container {
+      background-color: #333; /* Dark background */
+      color: white; /* White text */
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      }
+      .infographic-section {
+        border-left: 3px solid white;
+        padding-left: 15px;
+        margin-bottom: 10px;
+      }
+      .infographic-header {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+      .infographic-value {
+        font-size: 2em;
+      }
+
+      .custom-vertical-line {
+        border-left: 3px solid #000; /* Black vertical line */
+        padding-left: 10px; /* Spacing to the left of the text */
+      }
+
+      .hyperlink-block {
+        text-align: center; /* Center align the content */
+        padding: 20px;
+      }
+      .arrow {
+        font-size: 24px; /* Size of the arrow icons */
+      }
+      .hyperlink-up,
+      .hyperlink-down {
+        margin: 80px 0;
       }
     </style>
   </head>
@@ -87,13 +124,15 @@
       </i>
     </p>
     6.
-    <p class="text-uppercase text-dark">Разарабатывая данный продукт мы учли: цены, санкции, логистику.</p>
+    <p class="text-uppercase text-dark fw-bold custom-vertical-line">
+      Разарабатывая данный продукт мы учли: цены, санкции, логистику.
+    </p>
   
     7. 
     <div class="footer" id="footer">
   
       <div class="text-center">
-        <p>Полезно? <br>
+        <p class="fw-bold text-dark">Полезно? <br>
         Поделитесь пожалуйста
         </p>
       </div>
@@ -116,46 +155,88 @@
     
     8.
     <div class="youtube-container d-flex flex-column flex-wrap align-content-center">
-      <h2 class="text-uppercase text-dark text-center">о forcemontage за 3 минуты</h2>
+      <h2 class="text-uppercase text-dark text-center fw-bold">о forcemontage за 3 минуты</h2>
       <iframe width="1092" height="614" src="https://www.youtube.com/embed/-SHvWfXsKu8" title="Почему Forcemontage? | Отзыв заказчицы Ольги" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
   
     9.
     <div class="youtube-container d-flex flex-column flex-wrap align-content-center">
-      <h2 class="text-dark text-center">Андрей Мерзликин</h2>
-      <p class="text-center text-dark">(Актер)</p>
-      <img src="assets/img/1.png" class="img-fluid" alt="img" />
+      <h2 class="text-dark text-center fw-bold">Андрей Мерзликин</h2>
+      <p class="text-center text-dark fw-bold">(Актер)</p>
+      <img src="https://avatars.dzeninfra.ru/get-zen_doc/4481244/pub_64f844c9fd21dc63e34137a0_64f848fefd21dc63e35b20dd/scale_1200" class="img-fluid" alt="img" />
     </div>
+
+    10.
+    <div class="container infographic-container" style="background: url('/assets/img/1.png') ;">
+      <div class="row">
+        <div class="col-md-6 infographic-section my-4">
+          <h2 class="infographic-header fw-bold">в 2011</h2>
+          <p>Создана компания <br>FORCEMONTAGE</p>
+        </div>
+        <div class="col-md-6 infographic-section my-4">
+          <h2 class="infographic-header fw-bold">200+</h2>
+          <p>Завершенных объектов</p>
+        </div>
+        <div class="col-md-6 infographic-section my-4">
+          <h2 class="infographic-header fw-bold">в 2013</h2>
+          <p>Создан канал на <br>YOUTUBE</p>
+        </div>
+        <div class="col-md-6 infographic-section my-4">
+          <h2 class="infographic-header fw-bold">23 000 000</h2>
+          <p>просмотров <br>на Youtube</p>
+        </div>
+        <div class="col-md-6 infographic-section my-4">
+          <h2 class="infographic-header fw-bold">412</h2>
+          <p>Видео о <br>результатах работы</p>
+        </div>
+        <div class="col-md-6 infographic-section my-4">
+          <h2 class="infographic-header fw-bold">36</h2>
+          <p>Живых видео <br> объектов</p>
+        </div>
+        <div class="col-md-6 infographic-section my-4">
+          <h2 class="infographic-header fw-bold">168 000</h2>
+          <p>Подписчиков на <br>Youtube</p>
+        </div>
+        <div class="col-md-6 infographic-section my-4">
+          <h2 class="infographic-header fw-bold">43 000</h2>
+          <p>Подписчиков в <br> Instagram</p>
+        </div>
+      </div>
 
   </div>
 
+  11.
+  <div class="hyperlink-block">
+    <div class="hyperlink-up">
+      <i class="fas fa-arrow-up arrow"></i>
+      <p class="text-dark fw-bold text-uppercase">а хватит ли денег на ремонт? как сделать дизайн проект с минимальными рисками?</p>
+    </div>
+    <div class="hyperlink-down">
+      <p class="text-dark fw-bold text-uppercase">ремонт по дизайн-проекту клиента</p>
+      <i class="fas fa-arrow-down arrow"></i>
+    </div>
+</div>
 
+  12.
 
+  
 
-  <div class="modal modal-slide modal-slide-from-left" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M11.9998 15.0048L19.5123 22.5188C19.911 22.9174 20.4517 23.1413 21.0154 23.1413C21.5792 23.1413 22.1199 22.9174 22.5185 22.5188C22.9172 22.1201 23.1411 21.5794 23.1411 21.0157C23.1411 20.4519 22.9172 19.9112 22.5185 19.5126L15.0031 12L22.5171 4.48742C22.7144 4.29003 22.8709 4.05572 22.9776 3.79785C23.0844 3.53999 23.1393 3.26363 23.1392 2.98454C23.1391 2.70546 23.0841 2.42912 22.9772 2.17131C22.8704 1.9135 22.7138 1.67926 22.5164 1.48196C22.319 1.28467 22.0847 1.12818 21.8268 1.02144C21.569 0.914704 21.2926 0.859799 21.0135 0.859865C20.7344 0.859931 20.4581 0.914965 20.2003 1.02183C19.9425 1.12869 19.7082 1.28528 19.5109 1.48267L11.9998 8.99525L4.48718 1.48267C4.29125 1.27962 4.05685 1.11763 3.79764 1.00614C3.53844 0.894646 3.25962 0.835895 2.97747 0.833311C2.69531 0.830727 2.41547 0.884361 2.15427 0.991085C1.89306 1.09781 1.65573 1.25548 1.45611 1.45491C1.2565 1.65434 1.0986 1.89152 0.99163 2.15263C0.88466 2.41373 0.830762 2.69352 0.83308 2.97568C0.835397 3.25783 0.893885 3.5367 1.00513 3.79601C1.11638 4.05532 1.27815 4.28988 1.48101 4.486L8.99643 12L1.48243 19.5126C1.08379 19.9112 0.859834 20.4519 0.859834 21.0157C0.859834 21.5794 1.08379 22.1201 1.48243 22.5188C1.88107 22.9174 2.42175 23.1413 2.98552 23.1413C3.54928 23.1413 4.08996 22.9174 4.4886 22.5188L11.9998 15.0033V15.0048Z"
-                    fill="white" />
-            </svg>
-          </button>
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Оставить заявку</h5>
+    <div class="modal-dialog modal-dialog-centered" style="background-color: #000;">
+        <div class="modal-content" style="background-color: #000;">
+          <div class="modal-header d-block border-bottom-0">
+            <h2 class="modal-title text-center fw-bold" id="exampleModalLabel" style="color: #fff">Оставить заявку</h2>
           </div>
-            <div class="modal-body pt-4">
+            <div class="modal-body pt-4 border-bottom-0">
                 <form>
                     <div class="mb-3">
-                        <input type="email" class="form-control" id="email" placeholder="Ваше имя">
+                        <input type="email" class="form-control" id="email" placeholder="Ваше имя" style="background-color: #000;">
                     </div>
                     <div class="mb-3">
-                        <input type="tel" class="form-control" id="mobile" placeholder="Ваш номер телефона">
+                        <input type="tel" class="form-control" id="mobile" placeholder="Ваш номер телефона" style="background-color: #000;">
                     </div>
                     <p>Предпочитаемый способ свзяи</p>
                     <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="checkbox1">
+                        <input type="checkbox" class="form-check-input " id="checkbox1">
                         <label class="form-check-label" for="checkbox1">Позвонить</label>
                     </div>
                     <div class="mb-3 form-check">
@@ -168,8 +249,8 @@
                     </div>
                 </form>
             </div>
-            <div class="modal-footer d-flex justify-content-center pt-0 ">
-                <button type="button" class="btn btn-block w-100 ref-button">Отправить заявку</button>
+            <div class="modal-footer d-flex justify-content-center pt-0 border-top-0 ">
+                <button type="button" class="btn btn-block w-100 ref-button fw-bold" style="color: #000; background-color: #fff;">Оставить заявку</button>
                 <p class="text-center ref-description my-2">Нажимая на кнопку "Получить консультацию" вы даете свое согласие на обработку персональных данных</p>
             </div>
         </div>
