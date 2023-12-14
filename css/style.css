@@ -931,6 +931,21 @@ body.modal-open {
   }
 }
 
+@keyframes slideInFromRight {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+
+.modal-fullscreen {
+  animation: 0.5s ease-out 0s 1 slideInFromRight;
+}
+
+
 .intro-bottom {
   position: fixed;
   display: flex;
