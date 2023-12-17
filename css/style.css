@@ -1044,11 +1044,11 @@ body.modal-open {
 }
 
 #overlay {
-  z-index: 1050;
+  z-index: 1060;
 }
 
 #exampleModal {
-  z-index: 1060;
+  z-index: 1070;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
