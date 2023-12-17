@@ -1068,8 +1068,12 @@ body.modal-open {
   }
 
   .gallery-img-container {
-    height: 800px !important;
+    height: 100vh !important;
     background-attachment: scroll !important;
+  }
+
+  gallery-youtube-container {
+    height: 100vh !important;
   }
 
   

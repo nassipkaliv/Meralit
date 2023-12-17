@@ -1078,6 +1078,41 @@ document.onreadystatechange = function () {
         });
     });
 
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var sections = document.querySelectorAll('.section'); // Классы ваших секций
+    var currentSectionIndex = 0;
+    var isScrolling = false; // Флаг для предотвращения множественного срабатывания скролла
+
+    // Функция для проверки, является ли устройство мобильным
+    function isMobileDevice() {
+        return window.innerWidth <= 768; // или любое другое значение, соответствующее мобильному устройству
+    }
+
+    window.addEventListener('wheel', function(e) {
+        if (!isMobileDevice() || isScrolling) return;
+
+        e.preventDefault();
+        isScrolling = true;
+
+        setTimeout(function() { // Задержка для предотвращения множественной прокрутки
+            if (e.deltaY > 0 && currentSectionIndex < sections.length - 1) {
+                // Прокрутка вниз
+                currentSectionIndex++;
+            } else if (e.deltaY < 0 && currentSectionIndex > 0) {
+                // Прокрутка вверх
+                currentSectionIndex--;
+            }
+
+            window.scrollTo({
+                top: sections[currentSectionIndex].offsetTop,
+                behavior: 'smooth'
+            });
+
+            setTimeout(function() { isScrolling = false; }, 1000); // Время в мс, необходимое для завершения прокрутки
+        }, 50);
+    });
+});
   </script>
 </body>
 </html>
