@@ -11,7 +11,18 @@
 </head>
 <body>
   <div id="loader" class="preloader">
-    <svg xmlns="http://www.w3.org/2000/svg" width="182" height="50" viewBox="0 0 182 50" fill="none">
+    <div class="preloader__spinner">
+       <svg
+      width="210px"
+      height="160px"
+      version="1.1"
+      viewBox="0 0 210 160"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:cc="http://creativecommons.org/ns#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    >
+
       <g id="svg__lettersG">
         <path id="svg__lettersG__N" style="fill: #fff; stroke-width: 0.5; stroke: #fff;" d="M13.1064 42.5312C12.6342 42.5312 12.2334 42.432 11.904 42.2331C11.5745 42.0346 11.3238 41.7584 11.1512 41.4049C10.9788 41.0516 10.8926 40.6426 10.8926 40.1783C10.8926 39.714 10.9788 39.3049 11.1512 38.9516C11.3238 38.5981 11.5745 38.3222 11.904 38.1234C12.2334 37.9245 12.6342 37.8254 13.1064 37.8254C13.6553 37.8254 14.1073 37.9583 14.4618 38.2236C14.8166 38.4893 15.0608 38.8468 15.195 39.2967L14.5986 39.4471C14.502 39.1105 14.3292 38.8448 14.0799 38.6505C13.8306 38.4558 13.506 38.3586 13.1064 38.3586C12.7527 38.3586 12.4584 38.4349 12.2236 38.5876C11.9886 38.7403 11.8117 38.9535 11.6931 39.2277C11.5745 39.5016 11.514 39.8185 11.5119 40.1783C11.5096 40.538 11.5679 40.8544 11.6865 41.1273C11.8051 41.4 11.983 41.6136 12.2202 41.7675C12.4573 41.921 12.7527 41.9979 13.1064 41.9979C13.506 41.9979 13.8306 41.9004 14.0799 41.7046C14.3292 41.5091 14.502 41.244 14.5986 40.9093L15.195 41.0597C15.0608 41.5096 14.8166 41.8672 14.4618 42.1328C14.1073 42.3985 13.6553 42.5312 13.1064 42.5312Z"/>
         <path id="svg__lettersG__N" style="fill: #fff; stroke-width: 0.5; stroke: #fff;" d="M20.4369 42.4371V38.4497H18.8193V37.9194H22.6409V38.4497H21.0234V42.4371H20.4369Z"/>
@@ -41,12 +52,13 @@
         <path id="svg__lettersG__N" style="fill: #fff; stroke-width: 0.5; stroke: #fff;" d="M109.272 20.6288C114.294 20.6288 116.519 18.1705 116.519 12.2278V4.7966H125.744V20.5428H132.178V1.14441e-05H110.231V10.7063C110.231 15.4457 109.525 15.8682 107.507 15.8682C107.433 15.8682 107.376 15.8637 106.944 15.862V20.6181C107.898 20.6707 108.55 20.6288 109.272 20.6288Z"/>
       </g>
     </svg>
+    </div>
   </div>
 
   <div id="content">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container-fluid">
-        <button type="button" class="btn faq-button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">
+        <button type="button" class="faq-button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">
         <svg class="faq-button-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50" fill="none">
            <use xlink:href="assets/icons/icons.svg#Faq"></use>
         </svg>
@@ -89,7 +101,7 @@
             </defs>
           </svg>
         </a>
-        <button class="btn burger-menu" type="button" data-toggle="modal" data-target="#overlay">
+        <button class="burger-menu" type="button" data-toggle="modal" data-target="#overlay">
           <svg class="burger-menu-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50" fill="none">
             <use xlink:href="assets/icons/icons.svg#burger-menu"></use>
           </svg>
@@ -100,7 +112,7 @@
     <div class="modal modal-slide modal-slide-from-left" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
-            <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M11.9998 15.0048L19.5123 22.5188C19.911 22.9174 20.4517 23.1413 21.0154 23.1413C21.5792 23.1413 22.1199 22.9174 22.5185 22.5188C22.9172 22.1201 23.1411 21.5794 23.1411 21.0157C23.1411 20.4519 22.9172 19.9112 22.5185 19.5126L15.0031 12L22.5171 4.48742C22.7144 4.29003 22.8709 4.05572 22.9776 3.79785C23.0844 3.53999 23.1393 3.26363 23.1392 2.98454C23.1391 2.70546 23.0841 2.42912 22.9772 2.17131C22.8704 1.9135 22.7138 1.67926 22.5164 1.48196C22.319 1.28467 22.0847 1.12818 21.8268 1.02144C21.569 0.914704 21.2926 0.859799 21.0135 0.859865C20.7344 0.859931 20.4581 0.914965 20.2003 1.02183C19.9425 1.12869 19.7082 1.28528 19.5109 1.48267L11.9998 8.99525L4.48718 1.48267C4.29125 1.27962 4.05685 1.11763 3.79764 1.00614C3.53844 0.894646 3.25962 0.835895 2.97747 0.833311C2.69531 0.830727 2.41547 0.884361 2.15427 0.991085C1.89306 1.09781 1.65573 1.25548 1.45611 1.45491C1.2565 1.65434 1.0986 1.89152 0.99163 2.15263C0.88466 2.41373 0.830762 2.69352 0.83308 2.97568C0.835397 3.25783 0.893885 3.5367 1.00513 3.79601C1.11638 4.05532 1.27815 4.28988 1.48101 4.486L8.99643 12L1.48243 19.5126C1.08379 19.9112 0.859834 20.4519 0.859834 21.0157C0.859834 21.5794 1.08379 22.1201 1.48243 22.5188C1.88107 22.9174 2.42175 23.1413 2.98552 23.1413C3.54928 23.1413 4.08996 22.9174 4.4886 22.5188L11.9998 15.0033V15.0048Z"
@@ -142,111 +154,112 @@
     </div>
   
 
-    <div class="modal modal-fullscreen" id="overlay" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-          <button type="button" class="btn faq-button" id="faq-button">
-            <svg class="faq-button-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50" fill="none">
-               <use xlink:href="assets/icons/icons.svg#Faq"></use>
-            </svg>
-         </button>
-          <a class="mx-auto" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="182" height="50" viewBox="0 0 182 50" fill="none">
-              <use xlink:href="assets/icons/icons.svg#meralit-logo"></use>
-            </svg>
+  <div class="modal modal-fullscreen" id="overlay" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+          <use xlink:href="assets/icons/icons.svg#Faq"></use>
+        </svg>
+        <a class="mx-auto" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="182" height="50" viewBox="0 0 182 50" fill="none">
+            <use xlink:href="assets/icons/icons.svg#meralit-logo"></use>
+          </svg>
+        </a>
+        <button class="close" type="button" data-toggle="modal" data-target="#overlay">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9998 15.0048L19.5123 22.5188C19.911 22.9174 20.4517 23.1413 21.0154 23.1413C21.5792 23.1413 22.1199 22.9174 22.5185 22.5188C22.9172 22.1201 23.1411 21.5794 23.1411 21.0157C23.1411 20.4519 22.9172 19.9112 22.5185 19.5126L15.0031 12L22.5171 4.48742C22.7144 4.29003 22.8709 4.05572 22.9776 3.79785C23.0844 3.53999 23.1393 3.26363 23.1392 2.98454C23.1391 2.70546 23.0841 2.42912 22.9772 2.17131C22.8704 1.9135 22.7138 1.67926 22.5164 1.48196C22.319 1.28467 22.0847 1.12818 21.8268 1.02144C21.569 0.914704 21.2926 0.859799 21.0135 0.859865C20.7344 0.859931 20.4581 0.914965 20.2003 1.02183C19.9425 1.12869 19.7082 1.28528 19.5109 1.48267L11.9998 8.99525L4.48718 1.48267C4.29125 1.27962 4.05685 1.11763 3.79764 1.00614C3.53844 0.894646 3.25962 0.835895 2.97747 0.833311C2.69531 0.830727 2.41547 0.884361 2.15427 0.991085C1.89306 1.09781 1.65573 1.25548 1.45611 1.45491C1.2565 1.65434 1.0986 1.89152 0.99163 2.15263C0.88466 2.41373 0.830762 2.69352 0.83308 2.97568C0.835397 3.25783 0.893885 3.5367 1.00513 3.79601C1.11638 4.05532 1.27815 4.28988 1.48101 4.486L8.99643 12L1.48243 19.5126C1.08379 19.9112 0.859834 20.4519 0.859834 21.0157C0.859834 21.5794 1.08379 22.1201 1.48243 22.5188C1.88107 22.9174 2.42175 23.1413 2.98552 23.1413C3.54928 23.1413 4.08996 22.9174 4.4886 22.5188L11.9998 15.0033V15.0048Z" fill="white"/>
+          </svg>
+        </button>
+      </div>
+    
+    </nav>
+
+    <div class="container-fluid desktop-menu">
+      <div class="row">
+        <div class="col-6 left-menu-container">
+          <a class="menu-link mt-5" href="#">
+            Главная
           </a>
-          <button class="btn close" type="button" data-toggle="modal" data-target="#overlay">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9998 15.0048L19.5123 22.5188C19.911 22.9174 20.4517 23.1413 21.0154 23.1413C21.5792 23.1413 22.1199 22.9174 22.5185 22.5188C22.9172 22.1201 23.1411 21.5794 23.1411 21.0157C23.1411 20.4519 22.9172 19.9112 22.5185 19.5126L15.0031 12L22.5171 4.48742C22.7144 4.29003 22.8709 4.05572 22.9776 3.79785C23.0844 3.53999 23.1393 3.26363 23.1392 2.98454C23.1391 2.70546 23.0841 2.42912 22.9772 2.17131C22.8704 1.9135 22.7138 1.67926 22.5164 1.48196C22.319 1.28467 22.0847 1.12818 21.8268 1.02144C21.569 0.914704 21.2926 0.859799 21.0135 0.859865C20.7344 0.859931 20.4581 0.914965 20.2003 1.02183C19.9425 1.12869 19.7082 1.28528 19.5109 1.48267L11.9998 8.99525L4.48718 1.48267C4.29125 1.27962 4.05685 1.11763 3.79764 1.00614C3.53844 0.894646 3.25962 0.835895 2.97747 0.833311C2.69531 0.830727 2.41547 0.884361 2.15427 0.991085C1.89306 1.09781 1.65573 1.25548 1.45611 1.45491C1.2565 1.65434 1.0986 1.89152 0.99163 2.15263C0.88466 2.41373 0.830762 2.69352 0.83308 2.97568C0.835397 3.25783 0.893885 3.5367 1.00513 3.79601C1.11638 4.05532 1.27815 4.28988 1.48101 4.486L8.99643 12L1.48243 19.5126C1.08379 19.9112 0.859834 20.4519 0.859834 21.0157C0.859834 21.5794 1.08379 22.1201 1.48243 22.5188C1.88107 22.9174 2.42175 23.1413 2.98552 23.1413C3.54928 23.1413 4.08996 22.9174 4.4886 22.5188L11.9998 15.0033V15.0048Z" fill="white"/>
-            </svg>
-          </button>
+          <a class="menu-link" href="index.html">
+            О студии
+          </a>
+          <a class="menu-link" href="main.html">
+            Реализованыне проекты
+          </a>
+          <a class="menu-link" href="gallery-blocks.html">
+            Архитектурное проектирование
+          </a>
+          <a class="menu-link-small px-2" href="intro-blocks.html">
+            Частные дома
+          </a>
+          <a class="menu-link-small px-2" href="#">
+            Общественные здания
+          </a>
+          <a class="menu-link-small px-2" href="#">
+            Поселки и квартиры
+          </a>
+          <a class="menu-link-small px-2" href="#">
+            Благоустройство
+          </a>
+          <a class="menu-link my-3" href="#">
+            Дизайн интерьера
+          </a>
+          <a class="menu-link-small" href="#">
+            Дизайн домов
+          </a>
+          <a class="menu-link-small" href="#">
+            Дизайн квартир
+          </a>
+          <a class="menu-link-small" href="#">
+            Дизайн обзественных пространств
+          </a>
+          <a class="menu-link mt-3 mb-2" href="#">
+            Курс интерьерного дизайна
+          </a>
+          <a class="menu-link mb-2" href="#">
+            Бренд сирийной модели
+          </a>
+          <a class="menu-link mb-2" href="#">
+            Модульные дома
+          </a>
         </div>
-      
-      </nav>
-  
-      <div class="container-fluid desktop-menu">
-        <div class="row">
-          <div class="col-6 left-menu-container">
-            <a class="menu-link mt-5" href="index.html">
-              О Мералит
-            </a>
-            <a class="menu-link" href="main.html">
-              Готовые решения
-            </a>
-            <a class="menu-link" href="gallery-blocks.html">
-              Наши кейсы
-            </a>
-            <a class="menu-link" href="intro-blocks.html">
-              Отзывы
-            </a>
-            <a class="menu-link-small px-2 py-1" href="#">
-              Консультации перед ремонтом
-            </a>
-            <a class="menu-link-small px-2 py-1" href="#">
-              Полезные технические решения
-            </a>
-            <a class="menu-link-small px-2 py-1" href="#">
-              Техническое сопровождение объекта
-            </a>
-            <a class="menu-link-small px-2 py-1" href="#">
-              Логистика, закуп и хранение материалов
-            </a>
-            <a class="menu-link-small px-2 py-1" href="#">
-              Оптимизация бюджета и дизайн-проект
-            </a>
-            <a class="menu-link-small px-2 py-1" href="#">
-              Презентация онлайн или вживую
-            </a>
-            <a class="menu-link-small px-2 py-1" href="#">
-              Сервис для клиентов
-            </a>
-            <a class="menu-link-small px-2 py-1" href="#">
-              Ремонт и частота на объекте
-            </a>
-            <a class="menu-link-small px-2 py-1" href="#">
-              Регламент проведения работ
-            </a>
-            <a class="menu-link-small px-2 py-1" href="#">
-              Договор (ремонтные работы)
-            </a>
-          </div>
-          <div class="col-6 right-menu-container">
-            <div class="vertical-line"></div>
-              <div class="right-container">
-                <a class="right-menu-link" href="#">
-                  КАТЕГОРИЯ
-                </a>
-                <a class="right-menu-link" href="#">
-                  КАТЕГОРИЯ
-                </a>
-                <a class="right-menu-link" href="#">
-                  КАТЕГОРИЯ
-                </a>
-                <a class="right-menu-link" href="#">
-                  КАТЕГОРИЯ
-                </a>
-              </div>
+        <div class="col-6 right-menu-container">
+          <div class="vertical-line"></div>
+            <div class="right-container">
+              <a class="right-menu-link" href="#">
+                КАТЕГОРИЯ
+              </a>
+              <a class="right-menu-link" href="#">
+                КАТЕГОРИЯ
+              </a>
+              <a class="right-menu-link" href="#">
+                КАТЕГОРИЯ
+              </a>
+              <a class="right-menu-link" href="#">
+                КАТЕГОРИЯ
+              </a>
             </div>
-        </div>
-        <div class="modal-bottom d-flex justify-content-end">
-          <div class="social-media-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-              <use xlink:href="assets/icons/icons.svg#vk-logo"></use>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
-              <use xlink:href="assets/icons/icons.svg#telegram-logo"></use>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-              <use xlink:href="assets/icons/icons.svg#facebook-logo"></use>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
-              <use xlink:href="assets/icons/icons.svg#instagram-logo"></use>
-            </svg>
           </div>
+      </div>
+      <div class="modal-bottom d-flex justify-content-end">
+        <div class="social-media-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <use xlink:href="assets/icons/icons.svg#vk-logo"></use>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
+            <use xlink:href="assets/icons/icons.svg#telegram-logo"></use>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <use xlink:href="assets/icons/icons.svg#facebook-logo"></use>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
+            <use xlink:href="assets/icons/icons.svg#instagram-logo"></use>
+          </svg>
         </div>
       </div>
-  
-      <div class="container-fluid mobile-menu pt-0">
+    </div>
+
+    <div class="container-fluid mobile-menu pt-0">
         <a class="menu-link mt-3" href="index.html">
           О Мералит
         </a>
@@ -289,7 +302,7 @@
         <a class="menu-link-small" href="#">
           Договор (ремонтные работы)
         </a>
-  
+
         <div class="modal-bottom d-flex justify-content-start pb-3">
           <div class="social-media-logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
@@ -310,8 +323,8 @@
           <p class="px-3">Просто <br>позвонить</p>
           <img alt="phone icon" src="assets/img/phone.png"/>
         </div>
-      </div>
     </div>
+  </div>
 
 
 
@@ -333,20 +346,14 @@
     </div>
     <div class="intro-bottom fixed-bottom d-flex p-3" id="phoneBottom">
       <div class="left-bottom-icons d-flex align-items-center">
-        <a href="https://t.me/meralit" target="_blank">
-          <img alt="Telegram icon" class="icon" src="assets/img/telegramicon.png"/>
-        </a>
-        <a href="https://wa.me/79219981196" target="_blank">
-          <img alt="WhatsApp icon" class="icon" src="assets/img/whatsappicon.png" />
-        </a>
+          <img alt="telegram icon" class="icon" src="assets/img/telegramicon.png"/>
+          <img alt="whatsapp icon" class="icon" src="assets/img/whatsappicon.png" />
       </div>
       <div class="phone-bottom">
-        <p class="m-0" id="phoneText">Просто <br>позвонить</p>
-        <button type="button" class="btn px-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <img src="assets/img/phone.png" class="icon" alt="phone icon"/>
-      </button>
+          <p class="m-0" id="phoneText">Просто <br>позвонить</p>
+          <img alt="phone icon" class="icon" src="assets/img/phone.png"/>
       </div>
-    </div>
+  </div>
   </div>
 
 <div class="project-container section" id="project-container">
@@ -703,7 +710,7 @@
           бизнеса
           </p>
         <div class="container-bottom">
-          <button class="btn btn-gallery-ref" data-toggle="modal" data-target="#exampleModal">Оставить заявку</button>
+          <button class="btn btn-gallery-ref" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">Оставить заявку</button>
           <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
             <use xlink:href="assets/icons/icons.svg#ref-arrow-left"></use>
           </svg>
@@ -717,7 +724,7 @@
           и интеллектуальные инновации
           </p>
         <div class="container-bottom">
-          <button class="btn btn-gallery-ref" data-toggle="modal" data-target="#exampleModal">Записаться</button>
+          <button class="btn btn-gallery-ref" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">Записаться</button>
           <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
             <use xlink:href="assets/icons/icons.svg#ref-arrow-right"></use>
           </svg>
@@ -754,7 +761,7 @@
           ваши интересы и желания
         </p>
         <div class="container-bottom">
-          <button class="btn btn-gallery-ref" data-toggle="modal" data-target="#exampleModal">Оставить заявку</button>
+          <button class="btn btn-gallery-ref" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">Оставить заявку</button>
           <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
             <use xlink:href="assets/icons/icons.svg#ref-arrow-left"></use>
           </svg>
@@ -798,7 +805,7 @@
       бизнеса
       </p>
     <div class="container-bottom">
-      <button class="btn btn-gallery-ref" data-toggle="modal" data-target="#exampleModal">Оставить заявку</button>
+      <button class="btn btn-gallery-ref" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">Оставить заявку</button>
       <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
         <use xlink:href="assets/icons/icons.svg#ref-arrow-left"></use>
       </svg>
@@ -837,7 +844,7 @@
               </ul>
             </div>
           </div>
-          <button class="btn btn-project" data-toggle="modal" data-target="#exampleModal">Записаться</button>
+          <button class="btn btn-project" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">Записаться</button>
         </div>
       </div>
     </div>
@@ -862,7 +869,7 @@
             <li>Велосипедная дорожка</li>
           </ul>
           <p>Близость к городу: поселок расположен в 21 км от КАД</p>
-          <button class="btn btn-project" data-toggle="modal" data-target="#exampleModal">Записаться</button>
+          <button class="btn btn-project" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">Записаться</button>
         </div>
       </div>
     </div>
@@ -883,7 +890,7 @@
             <li>Велосипедная дорожка</li>
           </ul>
           <p>Близость к городу: поселок расположен в 21 км от КАД</p>
-          <button class="btn btn-project" data-toggle="modal" data-target="#exampleModal">Записаться</button>
+          <button class="btn btn-project" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">Записаться</button>
         </div>
   </div>
   
@@ -900,7 +907,7 @@
           <p>Лесные участки в 21 км от Петербурга. К вашим услугам – развитая инфраструктура района</p>
           <p><a class="a-link" href="https://yandex.ru/maps/?ll=30.452057%2C60.215241&mode=search&sll=30.542014%2C60.195271&text=60.195271%2C30.542014&z=12">Проложить маршрут в Яндекс.Картах</a></p>
           <p><a href="https://yandex.ru/maps/?ll=30.452057%2C60.215241&mode=search&sll=30.542014%2C60.195271&text=60.195271%2C30.542014&z=12">Санкт-Петербург – 21 км<br> КАД – 21 км</a></p>
-          <button class="btn btn-project big" data-toggle="modal" data-target="#exampleModal">Записаться</button>
+          <button class="btn btn-project big" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">Записаться</button>
         </div>
       </div>
       <div class="col-md-7 col-sm-12 px-0 project-location-img-container">
@@ -960,7 +967,7 @@
           <p class="mb-0 ml-2">Прислать каталог в Telegram</p>
         </div>
         
-        <button class="btn btn-project" data-toggle="modal" data-target="#exampleModal">Оставить заявку</button>
+        <button class="btn btn-project" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">Оставить заявку</button>
       </div>
       <div class="col-md-7 col-sm-12 px-0 project-img">
         <img class="img-fluid w-100" src="assets/img/questionimg.png" alt="plan" />
@@ -1071,53 +1078,6 @@ document.onreadystatechange = function () {
         });
     });
 
-
-    document.addEventListener('DOMContentLoaded', function() {
-    var sections = document.querySelectorAll('.section'); // Классы ваших секций
-    var currentSectionIndex = 0;
-    var isScrolling = false; // Флаг для предотвращения множественного срабатывания скролла
-
-    // Функция для проверки, является ли устройство мобильным
-    function isMobileDevice() {
-        return window.innerWidth <= 768; // или любое другое значение, соответствующее мобильному устройству
-    }
-
-    window.addEventListener('wheel', function(e) {
-        if (!isMobileDevice() || isScrolling) return;
-
-        e.preventDefault();
-        isScrolling = true;
-
-        setTimeout(function() { // Задержка для предотвращения множественной прокрутки
-            if (e.deltaY > 0 && currentSectionIndex < sections.length - 1) {
-                // Прокрутка вниз
-                currentSectionIndex++;
-            } else if (e.deltaY < 0 && currentSectionIndex > 0) {
-                // Прокрутка вверх
-                currentSectionIndex--;
-            }
-
-            window.scrollTo({
-                top: sections[currentSectionIndex].offsetTop,
-                behavior: 'smooth'
-            });
-
-            setTimeout(function() { isScrolling = false; }, 1000); // Время в мс, необходимое для завершения прокрутки
-        }, 50);
-    });
-});
-const exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-const overlayModal = new bootstrap.Modal(document.getElementById('overlay'));
-
-document.getElementById('faq-button').addEventListener('click', function() {
-    exampleModal.show();
-    overlayModal.hide();
-});
-
-document.getElementById('btn-close-exampleModal').addEventListener('click', function() {
-    exampleModal.hide();
-    overlayModal.show();
-});
   </script>
 </body>
 </html>
