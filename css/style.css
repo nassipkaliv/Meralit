@@ -627,12 +627,18 @@ button:focus {
 }
 
 .mobile-number {
-  color: #DFD5CC;
+  color: #DFD5CC !important;
   font-family: 'Manrope', sans-serif;
   font-size: 32px;
   font-weight: 400;
   letter-spacing: 1.6px;
   margin-bottom: 20px;
+  text-decoration: none !important;
+}
+
+.mobile-number a{
+  color: #DFD5CC !important;
+  text-decoration: none !important;
 }
 
 .mob-num-line {
@@ -1044,11 +1050,36 @@ body.modal-open {
 }
 
 #overlay {
-  z-index: 1060;
+  z-index: 1050;
 }
 
 #exampleModal {
-  z-index: 1070;
+  z-index: 1060;
+}
+
+
+.hidden-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Стили для кастомного checkbox */
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Стилизация SVG при активном состоянии checkbox */
+.hidden-checkbox:checked + .custom-checkbox svg .checkmark {
+  fill: black;
+}
+
+/* Стиль для точки, которая будет заполняться при активации */
+.checkmark {
+  fill: none;
 }
 
 .navbar-transparent {
