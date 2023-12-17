@@ -1051,6 +1051,10 @@ body.modal-open {
   z-index: 1070;
 }
 
+.navbar-transparent {
+  background-color: rgba(0, 0 ,0 , 0.7);
+}
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .gallery-img-container {
     background-size: cover;
@@ -1305,4 +1309,9 @@ body.modal-open {
     #overlay.modal {
       overflow: hidden;
     }
+    
+    .bottom-arrow {
+      margin-bottom: -75px;
+    }
+  
   }
