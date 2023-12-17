@@ -53,6 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+let element = document.querySelector("#svg__lettersG__N");
 
-
-
+console.log(element.getTotalLength());

@@ -31,6 +31,28 @@ body::before {
 }
 
 
+#svg__lettersG__N {
+  stroke-dashoffset: 589;
+  stroke-dasharray: 589;
+
+  fill-opacity: 0;
+
+  animation: drawN 1.5s forwards;
+}
+@keyframes drawN {
+  0% {
+    stroke-dashoffset: 589;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
 
 
 .preloader {
@@ -67,6 +89,27 @@ body::before {
       fill: white; /* Your fill color */
   }
 }
+
+.fixed-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('assets/img/your-background-image.jpg'); /* Update with your image path */
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  /* Add your content styles here */
+}
+
+
+
 
 #content {
   display: none;
@@ -200,10 +243,12 @@ body::before {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 480px;
   margin: 0 auto;
+  background-position: center 0;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  position: relative;
+  overflow: hidden;
 }
 
 .gallery-youtube-container {
@@ -214,6 +259,7 @@ body::before {
   height: 925px;
   margin: 0 auto;
   background-size: cover;
+  background-position: center;
   text-align: center;
 }
 
