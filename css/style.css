@@ -244,12 +244,12 @@ body::before {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  background-position: center 0;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  overflow: hidden;
-}
+  }
+  
+ 
 
 .gallery-youtube-container {
   display: flex;
@@ -1029,10 +1029,17 @@ body.modal-open {
 }
 
 
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .gallery-img-container {
+    background-size: cover;
+    background-position: center center;
+  }
+}
 @media (max-width: 767px) {
 
   .intro {
-    background-attachment: scroll;
+    background-attachment: scroll !important;
   }
 
   .intro-title {
@@ -1054,9 +1061,10 @@ body.modal-open {
 
   .gallery-img-container {
     height: 800px !important;
-    background-size: cover;
-    background-attachment: scroll;
+    background-attachment: scroll !important;
   }
+
+  
 
   .gallery-title {
     font-size: 14px;
