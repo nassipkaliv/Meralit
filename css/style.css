@@ -345,7 +345,15 @@ body::before {
   z-index: 1000;
   border: none;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
+}
+
+button:focus {
+  box-shadow: none;
+}
+
+.btn:focus {
+  box-shadow: none;
 }
 
 
