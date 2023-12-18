@@ -100,7 +100,7 @@
     </div>
   </nav>
 
-  <div class="modal modal-slide modal-slide-from-left" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal modal-slide modal-slide-from-left" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <button class="btn btn-close" type="button" data-bs-dismiss="modal" data-target="#exampleModal">
@@ -146,7 +146,7 @@
 
   
 
-  <div class="modal modal-fullscreen" id="overlay" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal modal-fullscreen" id="overlay"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <button type="button" class="btn faq-button" id="faq-button"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">
@@ -698,7 +698,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+$(document).ready(function() {
+    // Когда открывается #exampleModal
+    $('#exampleModal').on('show.bs.modal', function() {
+      // Добавляем класс, который предотвращает прокрутку фона
+      $('body').addClass('modal-open');
+    });
 
+    // Когда закрывается #exampleModal
+    $('#exampleModal').on('hidden.bs.modal', function() {
+      // Если #overlayModal все еще открыт, возвращаем класс, предотвращающий прокрутку
+      if ($('#overlay').hasClass('show')) {
+        $('body').addClass('modal-open');
+      }
+    });
+  });
+
+  
 
     </script>
 </body>
