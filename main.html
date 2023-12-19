@@ -316,7 +316,7 @@
 
 
   <div class="intro section" id="intro" style="background: url('assets/img/main1.jpg') lightgray 50% / cover no-repeat;">
-    <div class="intro-content">
+    <div class="intro-content" style="margin-top: -70px;">
         <a class="intro-logo" href="index.html">
           <svg  xmlns="http://www.w3.org/2000/svg" width="182" height="50" viewBox="0 0 182 50" fill="none">
               <use xlink:href="assets/icons/icons.svg#meralit-logo"></use>
@@ -573,7 +573,7 @@
     </div>
   </div>
 
-  <div class="swiper sample-slider">
+  <div class="swiper sample-slider section">
     <div class="swiper-wrapper">
         <div class="swiper-slide"><img class="img-fluid" src="assets/img/carousel1.png"></div>
         <div class="swiper-slide"><img class="img-fluid" src="assets/img/carousel1.png"></div>
@@ -845,7 +845,7 @@
     </div>
   </div>
 
-  <div class="project-infrastructure">
+  <div class="project-infrastructure section">
     <div class="row">
       <div class="col-md-6 col-sm-12 order-md-1 order-sm-2">
         <img class="img-fluid" src="assets/img/infrastructure.png" alt="plan" />
@@ -870,7 +870,7 @@
     </div>
   </div>
 
-  <div class="project-infrastructure-mobile d-none">
+  <div class="project-infrastructure-mobile d-none section">
       <div class="project-title-small">
         <h2>инфраструктура окружения</h2>
         <div class="line"></div>
@@ -891,7 +891,7 @@
   
   
 
-  <div class="project-location">
+  <div class="project-location section">
     <div class="project-title-small">
       <h2>расположение</h2>
       <div class="line"></div>
@@ -918,7 +918,7 @@
     </div>
   </div>
 
-  <div class="project-question">
+  <div class="project-question section">
     <div class="project-title-small mb-4">
       <h2>
         <span class="h2-color">остались вопросы?</span> <br>
@@ -975,11 +975,11 @@
   </div>
   <p class="footer-description">© 2023 | ООО “Арт - студия “зробим” . УНП 191619308</p>
 
-  <button class="btn scroll-to-top-button footer-btn-top" onclick="scrollToTop()">
+  <a class="btn scroll-to-top-button footer-btn-top" href="#intro">
     <svg xmlns="http://www.w3.org/2000/svg" width="64" height="35" viewBox="0 0 64 35" fill="none">
       <path d="M62 33L32 3L2 33" stroke="white" stroke-width="3"/>
     </svg>
-  </button>
+  </a>
 </div>
 
 </div>
@@ -992,6 +992,16 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/app.js"></script>
 <script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    
+    scrollToTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+
     var loader;
 
 function loadNow(opacity) {
@@ -1077,6 +1087,8 @@ $(document).ready(function() {
       }
     });
   });
+
+
 
   </script>
 </body>

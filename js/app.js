@@ -1,8 +1,3 @@
-function scrollToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0; 
-}
-
 const swiper = new Swiper('.sample-slider', {
   loop: true,                       
   slidesPerView: 2,                  
