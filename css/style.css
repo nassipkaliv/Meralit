@@ -26,6 +26,8 @@ body::before {
 
 .section {
   scroll-snap-align: start;
+  background-attachment: scroll;
+
 }
 
 
@@ -145,7 +147,6 @@ body::before {
   flex-direction: column;
   width: 80%;
   z-index: 1000;
-  margin-top: -50px;
 }
 
 .navbar {
@@ -310,7 +311,7 @@ body::before {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: static;
   padding: 80px;
   z-index: 2;
 }
@@ -343,7 +344,7 @@ body::before {
   z-index: 1000;
   border: none;
   margin-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 45px;
 }
 
 button:focus {
@@ -1100,7 +1101,7 @@ body.modal-open {
   }
 
   .intro-title {
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0.8px;
   }
 
