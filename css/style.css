@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;800&display=swap');
 
 html {
-  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -131,7 +131,8 @@ body::before {
   height: 100vh;
   width: 100%;
   position: relative;
-  background-position: center center;
+  background-position: center;
+  overflow-x: hidden;
 }
 
 .intro-content {
@@ -219,6 +220,7 @@ body::before {
 
 
 .intro-bottom {
+  display: flex;
   position: relative;
   bottom: 0;
   text-align: center;
@@ -233,7 +235,6 @@ body::before {
 .left-bottom-icons {
   gap: 20px;
 }
-
 
 
 
@@ -304,7 +305,7 @@ body::before {
 }
 
 .footer {
-  background-color: #000;
+  background: #000;
   color: #fff;
   text-align: center;
   display: flex;
@@ -314,6 +315,7 @@ body::before {
   position: static;
   padding: 80px;
   z-index: 2;
+  overflow-x: hidden;
 }
 
 .footer-logo {
@@ -341,7 +343,7 @@ body::before {
 
 .scroll-to-top-button {
   position: relative;
-  z-index: 1000;
+  z-index: 2;
   border: none;
   margin-top: 20px;
   margin-bottom: 45px;
@@ -1095,6 +1097,10 @@ body.modal-open {
   }
 }
 @media (max-width: 767px) {
+
+  html {
+    scroll-snap-type: y mandatory;
+  }
 
   .intro {
     background-attachment: scroll !important;

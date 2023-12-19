@@ -109,27 +109,28 @@
         </a>
         <h1 class="intro-title">Творим с душой, создаем для вас!</h1>
         <p class="intro-subtitle">"МЕРАЛИТ" - эпицентр инноваций в дизайне,<br> ремонте и строительстве с 2015 года.</p>
-        <a href="#image-gallery">
+        <a class="scroll-to-bottom-button" id="scroll-to-bottom-button" href="#image-gallery">
             <svg class="bottom-arrow" xmlns="http://www.w3.org/2000/svg" width="64" height="35" viewBox="0 0 64 35" fill="none">
                 <use xlink:href="assets/icons/icons.svg#bottom-arrow"></use>
             </svg>
         </a>
     </div>
-    <div class="intro-bottom fixed-bottom d-flex p-3" id="phoneBottom">
-      <div class="left-bottom-icons d-flex align-items-center">
-        <a href="https://t.me/meralit" target="_blank">
-          <img alt="Telegram icon" class="icon" src="assets/img/telegramicon.png"/>
-        </a>
-        <a href="https://wa.me/79219981196" target="_blank">
-          <img alt="WhatsApp icon" class="icon" src="assets/img/whatsappicon.png" />
-        </a>
-      </div>
-      <div class="phone-bottom">
-        <p class="m-0" id="phoneText">Просто <br>позвонить</p>
-        <button type="button" class="btn px-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <img src="assets/img/phone.png" class="icon" alt="phone icon"/>
-      </button>
-      </div>
+  </div>
+
+  <div class="intro-bottom fixed-bottom d-flex p-3" id="phoneBottom">
+    <div class="left-bottom-icons d-flex align-items-center">
+      <a href="https://t.me/meralit" target="_blank">
+        <img alt="Telegram icon" class="icon" src="assets/img/telegramicon.png"/>
+      </a>
+      <a href="https://wa.me/79219981196" target="_blank">
+        <img alt="WhatsApp icon" class="icon" src="assets/img/whatsappicon.png" />
+      </a>
+    </div>
+    <div class="phone-bottom">
+      <p class="m-0" id="phoneText">Просто <br>позвонить</p>
+      <button type="button" class="btn px-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <img src="assets/img/phone.png" class="icon" alt="phone icon"/>
+    </button>
     </div>
   </div>
 
@@ -239,11 +240,11 @@
     </div>
     <p class="footer-description">© 2023 | ООО “Арт - студия “зробим” . УНП 191619308</p>
 
-    <button class="btn scroll-to-top-button footer-btn-top" onclick="scrollToTop()">
+    <a href="#intro" class="btn scroll-to-top-button footer-btn-top" id="scroll-to-top-button">
       <svg xmlns="http://www.w3.org/2000/svg" width="64" height="35" viewBox="0 0 64 35" fill="none">
         <path d="M62 33L32 3L2 33" stroke="white" stroke-width="3"/>
       </svg>
-    </button>
+    </a>
   </div>
 
   </div>
@@ -468,6 +469,8 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/app.js"></script>
   <script>
+
+
       var loader;
   
   function loadNow(opacity) {
@@ -516,81 +519,6 @@
         }
     });
 });
-
-    document.addEventListener('scroll', function() {
-  var scrollPosition = window.pageYOffset;
-  var parallaxElements = document.querySelectorAll('.gallery-img-container');
-
-  parallaxElements.forEach(function(el) {
-    var depth = parseFloat(el.getAttribute('data-parallax-depth') || 0.5); // default depth if not specified
-    var movement = (scrollPosition - el.offsetTop) * depth;
-    el.style.backgroundPosition = 'center ' + movement + 'px';
-  });
-});
-
-document.addEventListener('scroll', function() {
-  var isMobile = window.innerWidth <= 768; // Adjust this value based on your needs
-  var scrollPosition = window.pageYOffset;
-  var parallaxElements = document.querySelectorAll('.gallery-img-container');
-
-  parallaxElements.forEach(function(el) {
-    var depth = parseFloat(el.getAttribute('data-parallax-depth') || (isMobile ? 0.2 : 0.5));
-    var movement = (scrollPosition - el.offsetTop) * depth;
-    el.style.backgroundPosition = 'center ' + movement + 'px';
-  });
-});
-
-
-
-document.addEventListener('scroll', function() {
-  var isTablet = window.innerWidth <= 1024 && window.innerWidth > 768; // Adjust these values based on your needs
-  var scrollPosition = window.pageYOffset;
-  var parallaxElements = document.querySelectorAll('.gallery-img-container');
-
-  parallaxElements.forEach(function(el) {
-    var depth = parseFloat(el.getAttribute('data-parallax-depth') || (isTablet ? 0.1 : 0.5));
-    var movement = (scrollPosition - el.offsetTop) * depth;
-    el.style.backgroundPosition = 'center ' + movement + 'px';
-  });
-});
-
-
-
-document.addEventListener('scroll', function() {
-  var scrollPosition = window.pageYOffset;
-  var parallaxElements = document.querySelectorAll('.gallery-img-container');
-
-  parallaxElements.forEach(function(el) {
-    var depth = parseFloat(el.getAttribute('data-parallax-depth') || 0.1);
-    var elementOffsetTop = el.getBoundingClientRect().top + scrollPosition;
-    var movement = (scrollPosition - elementOffsetTop) * depth;
-
-    // Prevent the background position from exceeding the element's height
-    var maxMovement = el.offsetHeight * (1 - depth);
-    movement = Math.max(Math.min(movement, maxMovement), -maxMovement);
-
-    el.style.backgroundPosition = 'center ' + movement + 'px';
-  });
-});
-
-function updateParallax() {
-  const parallaxElements = document.querySelectorAll('.gallery-img-container');
-  const scrollPosition = window.pageYOffset;
-
-  parallaxElements.forEach(function(el) {
-    const depth = parseFloat(el.getAttribute('data-parallax-depth') || 0.1);
-    const elementRect = el.getBoundingClientRect();
-    const elementOffsetTop = elementRect.top + scrollPosition;
-    const movement = (scrollPosition - elementOffsetTop) * depth;
-    const backgroundPositionY = 50 - (movement / elementRect.height) * 100;
-
-    // Limit the background position to the size of the container
-    el.style.backgroundPositionY = `${Math.min(Math.max(backgroundPositionY, 0), 100)}%`;
-  });
-}
-
-window.addEventListener('scroll', updateParallax)
-
 $(document).ready(function() {
     // Когда открывается #exampleModal
     $('#exampleModal').on('show.bs.modal', function() {
@@ -607,7 +535,18 @@ $(document).ready(function() {
     });
   });
 
-  
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var scrollToTopButton = document.getElementById('scroll-to-top-button');
+
+    if (scrollToTopButton) {
+        scrollToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+});
 
     </script>
 </body>

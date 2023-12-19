@@ -1,8 +1,3 @@
-function scrollToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0; 
-}
-
 const swiper = new Swiper('.sample-slider', {
   loop: true,                       
   slidesPerView: 2,                  
@@ -40,18 +35,6 @@ $('#overlay').on('hidden.bs.modal', function () {
 });
 
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  
-  var button = document.getElementById('btn-scroll');
-  var targetElement = document.getElementById('image-gallery');
-
-  
-  button.addEventListener('click', function() {
-    
-    targetElement.scrollIntoView({ behavior: 'smooth' });
-  });
-});
 
 let element = document.querySelector("#svg__lettersG__N");
 
