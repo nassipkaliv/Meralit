@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Meralit - Index</title>
+
   </head>
 <body>
   <div id="loader" class="preloader">
@@ -596,7 +597,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth <= 768) { // Активировать только для мобильных устройств
+        var sections = Array.from(document.querySelectorAll('.section'));
+        var currentSection = 0;
 
+        window.addEventListener('wheel', function(e) {
+            e.preventDefault();
+            if (e.deltaY < 0 && currentSection > 0) {
+                // Скролл вверх
+                currentSection--;
+            } else if (e.deltaY > 0 && currentSection < sections.length - 1) {
+                // Скролл вниз
+                currentSection++;
+            }
+            sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+        }, { passive: false });
+    }
+});
   </script>
 </body>
 </html>
