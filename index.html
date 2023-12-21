@@ -462,7 +462,8 @@
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
@@ -519,35 +520,81 @@
         }
     });
 });
-$(document).ready(function() {
-    // Когда открывается #exampleModal
-    $('#exampleModal').on('show.bs.modal', function() {
-      // Добавляем класс, который предотвращает прокрутку фона
-      $('body').addClass('modal-open');
-    });
 
-    // Когда закрывается #exampleModal
-    $('#exampleModal').on('hidden.bs.modal', function() {
-      // Если #overlayModal все еще открыт, возвращаем класс, предотвращающий прокрутку
-      if ($('#overlay').hasClass('show')) {
-        $('body').addClass('modal-open');
-      }
-    });
+    document.addEventListener('scroll', function() {
+  var scrollPosition = window.pageYOffset;
+  var parallaxElements = document.querySelectorAll('.gallery-img-container');
+
+  parallaxElements.forEach(function(el) {
+    var depth = parseFloat(el.getAttribute('data-parallax-depth') || 0.5); // default depth if not specified
+    var movement = (scrollPosition - el.offsetTop) * depth;
+    el.style.backgroundPosition = 'center ' + movement + 'px';
   });
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    var scrollToTopButton = document.getElementById('scroll-to-top-button');
-
-    if (scrollToTopButton) {
-        scrollToTopButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
 });
 
-    </script>
+document.addEventListener('scroll', function() {
+  var isMobile = window.innerWidth <= 768; // Adjust this value based on your needs
+  var scrollPosition = window.pageYOffset;
+  var parallaxElements = document.querySelectorAll('.gallery-img-container');
+
+  parallaxElements.forEach(function(el) {
+    var depth = parseFloat(el.getAttribute('data-parallax-depth') || (isMobile ? 0.2 : 0.5));
+    var movement = (scrollPosition - el.offsetTop) * depth;
+    el.style.backgroundPosition = 'center ' + movement + 'px';
+  });
+});
+
+
+
+document.addEventListener('scroll', function() {
+  var isTablet = window.innerWidth <= 1024 && window.innerWidth > 768; // Adjust these values based on your needs
+  var scrollPosition = window.pageYOffset;
+  var parallaxElements = document.querySelectorAll('.gallery-img-container');
+
+  parallaxElements.forEach(function(el) {
+    var depth = parseFloat(el.getAttribute('data-parallax-depth') || (isTablet ? 0.1 : 0.5));
+    var movement = (scrollPosition - el.offsetTop) * depth;
+    el.style.backgroundPosition = 'center ' + movement + 'px';
+  });
+});
+
+
+
+document.addEventListener('scroll', function() {
+  var scrollPosition = window.pageYOffset;
+  var parallaxElements = document.querySelectorAll('.gallery-img-container');
+
+  parallaxElements.forEach(function(el) {
+    var depth = parseFloat(el.getAttribute('data-parallax-depth') || 0.1);
+    var elementOffsetTop = el.getBoundingClientRect().top + scrollPosition;
+    var movement = (scrollPosition - elementOffsetTop) * depth;
+
+    // Prevent the background position from exceeding the element's height
+    var maxMovement = el.offsetHeight * (1 - depth);
+    movement = Math.max(Math.min(movement, maxMovement), -maxMovement);
+
+    el.style.backgroundPosition = 'center ' + movement + 'px';
+  });
+});
+
+function updateParallax() {
+  const parallaxElements = document.querySelectorAll('.gallery-img-container');
+  const scrollPosition = window.pageYOffset;
+
+  parallaxElements.forEach(function(el) {
+    const depth = parseFloat(el.getAttribute('data-parallax-depth') || 0.1);
+    const elementRect = el.getBoundingClientRect();
+    const elementOffsetTop = elementRect.top + scrollPosition;
+    const movement = (scrollPosition - elementOffsetTop) * depth;
+    const backgroundPositionY = 50 - (movement / elementRect.height) * 100;
+
+    // Limit the background position to the size of the container
+    el.style.backgroundPositionY = `${Math.min(Math.max(backgroundPositionY, 0), 100)}%`;
+  });
+}
+
+window.addEventListener('scroll', updateParallax)
+
+  </script>
 </body>
 </html>
