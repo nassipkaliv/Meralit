@@ -250,7 +250,7 @@
   </div>
 
   
-  <div class="modal modal-slide modal-slide-from-left" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal modal-slide modal-slide-from-left modal-open" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <button class="btn btn-close" type="button" data-bs-dismiss="modal" data-target="#exampleModal">
@@ -296,7 +296,7 @@
 
   
 
-  <div class="modal modal-fullscreen" id="overlay"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal modal-fullscreen modal-open" id="overlay"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <button type="button" class="btn faq-button" id="faq-button"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal">
@@ -380,37 +380,37 @@
                 КАТЕГОРИЯ
               </a>
             </div>
+            <div class="modal-bottom d-flex justify-content-end align-items-end">
+              <div class="social-media-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                  <use xlink:href="assets/icons/icons.svg#vk-logo"></use>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
+                  <use xlink:href="assets/icons/icons.svg#telegram-logo"></use>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                  <use xlink:href="assets/icons/icons.svg#facebook-logo"></use>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
+                  <use xlink:href="assets/icons/icons.svg#instagram-logo"></use>
+                </svg>
+              </div>
+            </div>
           </div>
-      </div>
-      <div class="modal-bottom d-flex justify-content-end">
-        <div class="social-media-logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-            <use xlink:href="assets/icons/icons.svg#vk-logo"></use>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
-            <use xlink:href="assets/icons/icons.svg#telegram-logo"></use>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-            <use xlink:href="assets/icons/icons.svg#facebook-logo"></use>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
-            <use xlink:href="assets/icons/icons.svg#instagram-logo"></use>
-          </svg>
-        </div>
       </div>
     </div>
 
     <div class="container-fluid mobile-menu pt-0">
-      <a class="menu-link mt-3" href="index.html">
+      <a class="menu-link mt-md-3" href="index.html">
         О Мералит
       </a>
-      <a class="menu-link mt-3" href="main.html">
+      <a class="menu-link mt-md-3" href="main.html">
         Готовые решения
       </a>
-      <a class="menu-link mt-3" href="gallery-blocks.html">
+      <a class="menu-link mt-md-3" href="gallery-blocks.html">
         Наши кейсы
       </a>
-      <a class="menu-link mt-3 mb-5" href="intro-blocks.html">
+      <a class="menu-link mt-md-3 mb-md-5 mb-sm-3" href="intro-blocks.html">
         Отзывы
       </a>
       <a class="menu-link-small" href="#">
@@ -443,25 +443,10 @@
       <a class="menu-link-small" href="#">
         Договор (ремонтные работы)
       </a>
-
-      <div class="modal-bottom d-flex justify-content-start pb-3">
-        <div class="social-media-logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-            <use xlink:href="assets/icons/icons.svg#vk-logo"></use>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
-            <use xlink:href="assets/icons/icons.svg#telegram-logo"></use>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-            <use xlink:href="assets/icons/icons.svg#facebook-logo"></use>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
-            <use xlink:href="assets/icons/icons.svg#instagram-logo"></use>
-          </svg>
-        </div>
-      </div>
     </div>
   </div>
+
+
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -594,6 +579,22 @@ function updateParallax() {
 }
 
 window.addEventListener('scroll', updateParallax)
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var modalExample = document.getElementById('exampleModal');
+    var overlay = document.getElementById('overlay');
+
+    // Обработчик открытия модального окна
+    modalExample.addEventListener('show.bs.modal', function () {
+        overlay.classList.add('blur-background');
+    });
+
+    // Обработчик закрытия модального окна
+    modalExample.addEventListener('hide.bs.modal', function () {
+        overlay.classList.remove('blur-background');
+    });
+});
 
   </script>
 </body>
