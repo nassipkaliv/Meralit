@@ -596,22 +596,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-var swiper = new Swiper('.swiper-container', {
-  // Swiper options here
-});
-
-// Add click event listener to all images in the swiper
-document.querySelectorAll('.swiper-slide img').forEach(image => {
-  image.addEventListener('click', function() {
-    // Implement zoom functionality here
-    // This could be as simple as toggling a CSS class that changes the image size
-    if (this.classList.contains('zoomed')) {
-      this.classList.remove('zoomed');
-    } else {
-      this.classList.add('zoomed');
-    }
-  });
-});
 
   </script>
 </body>

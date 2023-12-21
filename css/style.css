@@ -100,9 +100,7 @@ body::before {
   z-index: 1000;
 }
 
-.navbar {
-  padding-top: 28px;
-}
+
 
 .navbar-brand {
   margin: 0 auto;
@@ -661,6 +659,15 @@ button:focus {
   content: "";
 }
 
+#galleryModal [class^="swiper-button-"]::after{
+  content: "";
+}
+
+#swiperModal [class^="swiper-button-"]::after{
+  content: "";
+}
+
+
 .swiper-pagination-bullet-active {
   opacity: var(--swiper-pagination-bullet-opacity, 1);
   background: var(--swiper-pagination-color,var(--swiper-theme-color))
@@ -752,6 +759,11 @@ body.modal-open {
   display: block;
   max-height: calc(100vh - 50px);
 }
+
+.modal-header {
+  border-bottom: none;
+}
+
 
 #swiperModal .modal-header {
   display: flex; /* Use Flexbox */

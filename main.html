@@ -450,7 +450,7 @@
   </div>
   
   <div class="swiper-button d-none">
-    <button class="btn btn-slider d-none">Смотреть все</button>
+    <button class="btn btn-slider d-none" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-dismiss="modal">Смотреть все</button>
   </div>
 
 </div>
@@ -468,7 +468,7 @@
       <h2 class="gallery-title mb-4">Архитектура</h2>
       <p class="gallery-subtitle-main">Стиль "Хай тек" набираетобороты в мире <br> загородного строительства. Движение и развитие <br> архитектуры ускорено и подброшено вверх <br>экспоненциально, благодаря достижениям <br>
         и прогрессу, в изготовлении современных <br>материалов и технологиях строительства. Самые <br>смелые архитекторские проекты теперь <br>реализуемы, самые невероятные фантазии <br>осуществимы.</p>
-        <button class="btn btn-gallery">Фотогалерея</button>
+        <button class="btn btn-gallery" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-dismiss="modal">Фотогалерея</button>
       </div>
       <div class="col-lg-6 col-sm-12 gallery-img-container" style="background-image: url('../assets/img/main4.png'); height: 480px;">
         <h2 class="gallery-title mb-4">Русская парная</h2>
@@ -775,7 +775,7 @@
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="zoom-button border-0 mx-2">
+          <button type="button" class="zoom-button border-0 mx-2 bg-transparent">
             <svg class="icon-increase" width="20" height="20" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M22.832 22L17.8592 17.0273" stroke="#000000" stroke-width="2" stroke-linecap="square"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4.58591 3.7511C0.917768 7.41924 0.917768 13.367 4.58591 17.0352C8.25405 20.7033 14.2019 20.7033 17.87 17.0352C21.5381 13.367 21.5381 7.41924 17.87 3.7511C14.2019 0.0829653 8.25405 0.0829653 4.58591 3.7511Z" stroke="#000000" stroke-width="2"></path><path d="M6.25781 10.3931H16.2035" stroke="#000000" stroke-width="2"></path><path d="M11.2305 15.3662V5.42053" stroke="#000000" stroke-width="2"></path>
             </svg>
@@ -801,6 +801,78 @@
                   </div>
                 </div>
             </div>
+            <div class="swiper-button-prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <use xlink:href="assets/icons/icons.svg#carousel-slider-left"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-next">
+              <svg id="carousel-slider-right" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <use xlink:href="assets/icons/icons.svg#carousel-slider-right"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade px-0" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body border-0 p-3 d-flex align-content-center justify-content-center">
+          <div class="swiper gallerySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img class="img-fluid" src="assets/img/slider1.jpg">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img class="img-fluid" src="assets/img/slider2.jpg">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img class="img-fluid" src="assets/img/slider3.jpg">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img class="img-fluid" src="assets/img/slider4.jpg">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img class="img-fluid" src="assets/img/slider5.jpg">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img class="img-fluid" src="assets/img/slider6.jpg">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img class="img-fluid" src="assets/img/slider7.jpg">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img class="img-fluid" src="assets/img/slider8.jpg">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img class="img-fluid" src="assets/img/slider9.jpg">
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
             <div class="swiper-button-prev">
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                 <use xlink:href="assets/icons/icons.svg#carousel-slider-left"></use>
@@ -1160,7 +1232,6 @@ document.querySelectorAll('.sample-slider .swiper-slide').forEach((slide, index)
   });
 });
 
-$('#swiperModal').modal('show');
 
 // Example for closing the modal
 $('#swiperModal').modal('hide');
@@ -1186,6 +1257,26 @@ document.querySelector('.zoom-button').addEventListener('click', function() {
 
   isZoomedIn = !isZoomedIn; // Toggle the zoom state
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.gallerySwiper', {
+      // Parameters
+      loop: true,
+      zoom: {
+        maxRatio: 3,  // Maximum zoom ratio
+        minRatio: 1,  // Minimum zoom ratio
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // And any other parameters you need
+    });
+  });
   </script>
 </body>
 </html>
