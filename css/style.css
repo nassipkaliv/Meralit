@@ -1349,4 +1349,22 @@ body.modal-open {
       overflow: hidden;
     }
     
+    #intro {
+      display: none !important;
+    }
+
+    #image-gallery {
+      display: none !important;
+    }
+
+    #footer {
+      display: none !important;
+    }
+
+    .mobile-version {
+      display: block !important;
+    }
+    
+    
+
   }
