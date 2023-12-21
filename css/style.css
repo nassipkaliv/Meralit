@@ -638,6 +638,11 @@ button:focus {
   margin-top: 70px;
 }
 
+.img-fluid.zoomed {
+  transform: scale(2); /* Example to double the size of the image */
+  transition: transform 0.3s ease-in-out;
+}
+
 .swiper-wrapper {
   margin-bottom: 50px;
 }
@@ -661,6 +666,9 @@ button:focus {
   background: var(--swiper-pagination-color,var(--swiper-theme-color))
 }
 
+.modal-fullscreen {
+  width: 100%;
+}
 
 
 .mySwiper {
@@ -729,6 +737,26 @@ body.modal-open {
 
 .mySwiper .gallery-img-container {
   height: 360px !important;
+}
+
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.swiper-slide img {
+  display: block;
+  max-height: calc(100vh - 50px);
+}
+
+#swiperModal .modal-header {
+  display: flex; /* Use Flexbox */
+  justify-content: flex-end; /* Align items to the end (right) */
+  align-items: center; 
 }
 
 #overlay.modal {
@@ -951,7 +979,7 @@ body.modal-open {
 }
 
 
-.modal-fullscreen {
+#overlay {
   animation: 0.5s ease-out 0s 1 slideInFromRight;
   background: rgba(0, 0, 0, 0.80) !important;
   overflow: hidden !important; 

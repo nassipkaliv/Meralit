@@ -362,9 +362,9 @@
 
   <div class="swiper sample-slider">
     <div class="swiper-wrapper">
-        <div class="swiper-slide"><img class="img-fluid" src="assets/img/carousel1.png"></div>
-        <div class="swiper-slide"><img class="img-fluid" src="assets/img/carousel1.png"></div>
-        <div class="swiper-slide"><img class="img-fluid" src="assets/img/carousel1.png"></div>
+        <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#swiperModal" data-bs-dismiss="modal"><img class="img-fluid" src="assets/img/carousel1.png" data-swiper-zoom="2"></div>
+        <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#swiperModal" data-bs-dismiss="modal"><img class="img-fluid" src="assets/img/carousel2.png" data-swiper-zoom="2"></div>
+        <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#swiperModal" data-bs-dismiss="modal" ><img class="img-fluid" src="assets/img/carousel3.png" data-swiper-zoom="2"></div>
     </div>
     <div class="swiper-pagination"></div>
     <div class="swiper-button-prev">
@@ -771,6 +771,53 @@
 
   </div>
 
+  <div class="modal fade px-0" id="swiperModal" tabindex="-1" aria-labelledby="swiperModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="zoom-button border-0 mx-2">
+            <svg class="icon-increase" width="20" height="20" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.832 22L17.8592 17.0273" stroke="#000000" stroke-width="2" stroke-linecap="square"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4.58591 3.7511C0.917768 7.41924 0.917768 13.367 4.58591 17.0352C8.25405 20.7033 14.2019 20.7033 17.87 17.0352C21.5381 13.367 21.5381 7.41924 17.87 3.7511C14.2019 0.0829653 8.25405 0.0829653 4.58591 3.7511Z" stroke="#000000" stroke-width="2"></path><path d="M6.25781 10.3931H16.2035" stroke="#000000" stroke-width="2"></path><path d="M11.2305 15.3662V5.42053" stroke="#000000" stroke-width="2"></path>
+            </svg>
+          </button>
+          <button type="button" class="btn-close px-0 mx-0" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body border-0 p-0 d-flex align-content-center justify-content-center">
+          <div class="swiper imageSwiper d-flex align-content-center justify-content-center my-0 mx-4">
+            <div class="swiper-wrapper my-0 mx-2">
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img class="img-fluid" src="assets/img/carousel1.png">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img class="img-fluid" src="assets/img/carousel2.png">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img class="img-fluid" src="assets/img/carousel3.png">
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <use xlink:href="assets/icons/icons.svg#carousel-slider-left"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-next">
+              <svg id="carousel-slider-right" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <use xlink:href="assets/icons/icons.svg#carousel-slider-right"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div class="modal modal-slide modal-slide-from-left modal-open" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -1090,6 +1137,54 @@ document.addEventListener('DOMContentLoaded', function () {
     modalExample.addEventListener('hide.bs.modal', function () {
         overlay.classList.remove('blur-background');
     });
+});
+
+
+// Initialize the modal Swiper
+var modalSwiper = new Swiper('.imageSwiper', {
+  // Your settings...
+  zoom: {
+    maxRatio: 3,  // Maximum zoom ratio
+    minRatio: 1,  // Minimum zoom ratio
+    toggle: true  // Enable zoom toggle on double tap
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+document.querySelectorAll('.sample-slider .swiper-slide').forEach((slide, index) => {
+  slide.addEventListener('click', function() {
+    modalSwiper.slideTo(index, 0);
+  });
+});
+
+$('#swiperModal').modal('show');
+
+// Example for closing the modal
+$('#swiperModal').modal('hide');
+
+var isZoomedIn = false; // To track the zoom state
+
+document.querySelector('.zoom-button').addEventListener('click', function() {
+  var zoomButton = this;
+  
+  if (isZoomedIn) {
+    // Zoom out
+    modalSwiper.zoom.out();
+
+    // Change to "increase" icon
+    zoomButton.innerHTML = `<svg class="icon-increase" width="20" height="20" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.832 22L17.8592 17.0273" stroke="#000000" stroke-width="2" stroke-linecap="square"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4.58591 3.7511C0.917768 7.41924 0.917768 13.367 4.58591 17.0352C8.25405 20.7033 14.2019 20.7033 17.87 17.0352C21.5381 13.367 21.5381 7.41924 17.87 3.7511C14.2019 0.0829653 8.25405 0.0829653 4.58591 3.7511Z" stroke="#000000" stroke-width="2"></path><path d="M6.25781 10.3931H16.2035" stroke="#000000" stroke-width="2"></path><path d="M11.2305 15.3662V5.42053" stroke="#000000" stroke-width="2"></path></svg>`;
+  } else {
+    // Zoom in
+    modalSwiper.zoom.in();
+
+    // Change to "decrease" icon
+    zoomButton.innerHTML = `<svg class="icon-decrease" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.9961 22L17.0233 17.0273" stroke="#000000" stroke-width="2" stroke-linecap="square"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M3.74997 3.7511C0.0818308 7.41924 0.0818308 13.367 3.74997 17.0352C7.41811 20.7033 13.3659 20.7033 17.0341 17.0352C20.7022 13.367 20.7022 7.41924 17.0341 3.7511C13.3659 0.0829653 7.41811 0.0829653 3.74997 3.7511Z" stroke="#000000" stroke-width="2"></path><path d="M5.41797 10.3931H15.3637" stroke="#000000" stroke-width="2"></path></svg>`;
+  }
+
+  isZoomedIn = !isZoomedIn; // Toggle the zoom state
 });
   </script>
 </body>

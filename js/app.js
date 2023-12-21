@@ -1,3 +1,8 @@
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0; 
+}
+
 const swiper = new Swiper('.sample-slider', {
   loop: true,                       
   slidesPerView: 2,                  
@@ -33,6 +38,7 @@ $('#overlay').on('show.bs.modal', function () {
 $('#overlay').on('hidden.bs.modal', function () {
   $(this).removeClass('show');
 });
+
 
 
 
